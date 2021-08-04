@@ -14,10 +14,12 @@
     "gatsby-plugin-sharp": "^3.10.2",
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-sharp": "^3.10.0",
+    "gsap": "^3.7.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-parallax": "^3.3.0",
     "react-scroll-parallax": "^2.4.0",
     "styled-components": "^5.3.0"
   },
