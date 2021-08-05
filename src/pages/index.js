@@ -11,14 +11,18 @@ import im6 from "../images/6.png"
 import im7 from "../images/7.png"
 import im8 from "../images/8.png"
 import imbg from "../images/bg.png"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
+
 const Container = styled.div`
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  justify-content: center;
-  //align-items: center;
+  /*border: 1px solid red; /* BORDER TEST*/
+  padding: 0;
+  margin: 0;
+  //background-color: #130d0a;
+  font-family: "Playfair Display", serif;
+  color: #fff;
   img {
-    width: 100%;
     position: absolute;
   }
 `
@@ -26,19 +30,100 @@ const Space = styled.div`
   min-height: 2000px;
 `
 function IndexPage() {
-  useEffect(() => {}, [])
+  const wrapper = useRef(null)
+
+  useEffect(() => {
+    gsap.to(".im1", {
+      yPercent: -15,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".im1",
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true,
+      },
+    })
+    gsap.to(".im2", {
+      yPercent: -5,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".im2",
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true,
+      },
+    })
+    gsap.to(".im3", {
+      yPercent: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".im3",
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true,
+      },
+    })
+    gsap.to(".im4", {
+      yPercent: 5,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".im4",
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true,
+      },
+    })
+    gsap.to(".im5", {
+      yPercent: 10,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".im5",
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true,
+      },
+    })
+    gsap.to(".im6", {
+      yPercent: 15,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".im6",
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true,
+      },
+    })
+    gsap.to(".im7", {
+      yPercent: 15,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".im7",
+        // start: "top bottom", // the default values
+        // end: "bottom top",
+        scrub: true,
+      },
+    })
+  }, [])
   return (
     <>
-      <Container>
-        <img src={imbg} />
-        <img src={im1} />
-        <img src={im2} />
-        <img src={im3} />
-        <img src={im4} />
-        <img src={im5} />
-        <img src={im6} />
-        <img src={im7} />
-        <img src={im8} />
+      <Container ref={wrapper} className="imw">
+        <img src={imbg} className="imbg" />
+
+        <img src={im1} className="im1" />
+
+        <img src={im2} className="im2" />
+
+        <img src={im3} className="im3" />
+
+        <img src={im4} className="im4" />
+
+        <img src={im5} className="im5" />
+
+        <img src={im6} className="im6" />
+
+        <img src={im7} className="im7" />
+
+        <img src={im8} className="im2" />
       </Container>
       <Space />
     </>
