@@ -13,20 +13,23 @@ import im8 from "../images/8.png"
 import imbg from "../images/bg.png"
 import impla from "../images/bgpla.png"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import main from "../components/main.js"
+import Component from "./../../.cache/dev-404-page"
+import Main from "./../components/Main"
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Container = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
+  border: 1px solid yellow; /* BORDER TEST*/
   padding: 0;
   margin: 0;
   height: 100vh;
 
   //background-color: #130d0a;
   font-family: "Playfair Display", serif;
-  color: #fff;
+  color: black;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   .im1 {
     z-index: 1;
@@ -63,6 +66,8 @@ const Container = styled.div`
   .impla {
     z-index: 9;
     background-image: url(${impla});
+    background-size: cover;
+    background-position: left;
   }
   .imbgcolor {
     z-index: 0;
@@ -77,16 +82,15 @@ const Container = styled.div`
     background-image: url(${imbg});
   }
 `
-const Box = styled.div`
-  position: absolute;
-  border: 1px solid red; /* BORDER TEST*/
+
+const Box2 = styled.div`
+  border: 1px solid black; /* BORDER TEST*/
+  color: black;
+  overflow: hidden;
   padding: 0;
   margin: 0;
   width: 50vw;
   height: 100vh;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
 `
 const Space = styled.div`
   min-height: 2000px;
@@ -94,21 +98,13 @@ const Space = styled.div`
 function IndexPage() {
   return (
     <>
+      asdas
       <Container className="imw">
-        <Box></Box>
-        <Box className="impla" />
-        <Box className="imbg" />
-        <Box className="im8" />
-        <Box className="im7" />
-        <Box className="im6" />
-        <Box className="im5" />
-        <Box className="im4" />
-        <Box className="im3" />
-        <Box className="im2" />
-        <Box className="im1" />
-        <Box className="imbgcolor" />
+        <Box2></Box2>
+        <Box2>
+          <Main></Main>{" "}
+        </Box2>
       </Container>
-
       <Space />
     </>
   )
