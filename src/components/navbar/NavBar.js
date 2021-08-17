@@ -1,4 +1,8 @@
+import { slide as Menu } from "react-burger-menu"
+import logo from "../../images/Logo.svg"
+import "./index.css"
 import React from "react"
+import Burgermenu from "./Burgermenu"
 import styled from "styled-components"
 
 const Container = styled.div`
@@ -25,5 +29,16 @@ const Img = styled.div`
   }
 `
 export default function NavBar() {
-  return <></>
+  return (
+    <>
+      <Container>
+        <Img>
+          <img src={logo}></img>
+        </Img>
+        Patryk Kubala
+      </Container>
+
+      <Burgermenu />
+    </>
+  )
 }
