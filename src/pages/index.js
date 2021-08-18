@@ -8,11 +8,12 @@ import Mountains from "../components/Mountains.js"
 import Component from "./../../.cache/dev-404-page"
 
 import NavBar from "../components/navbar/NavBar"
+import Main from "./../components/Main"
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Container = styled.div`
-  border: 1px solid yellow; /* BORDER TEST*/
+  //border: 1px solid yellow; /* BORDER TEST*/
   padding: 0;
   margin: 0;
   height: 100vh;
@@ -27,7 +28,7 @@ const Container = styled.div`
 `
 
 const Box = styled.div`
-  border: 1px solid black; /* BORDER TEST*/
+  //border: 1px solid black; /* BORDER TEST*/
 
   overflow: hidden;
   padding: 0;
@@ -55,7 +56,9 @@ function IndexPage() {
       <Phone>
         <NavBar />
         <Container>
-          <Box></Box>
+          <Box>
+            <Main />
+          </Box>
           <Box>
             <Mountains></Mountains>{" "}
           </Box>
