@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Apps from "./Apps"
-import Title from "./Title"
+import Title from "../Title"
 
 const AppsContainer = styled.div`
   display: flex;

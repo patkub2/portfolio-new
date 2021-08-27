@@ -9,6 +9,7 @@ import Mountains from "../components/Mountains.js"
 import NavBar from "../components/navbar/NavBar"
 import Main from "./../components/Main"
 import Technologies from "../components/technologies/Technologies"
+import Projects from "../components/projects/Projects"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -62,7 +63,8 @@ function IndexPage() {
           <Box>
             <Mountains></Mountains>{" "}
           </Box>
-          <Technologies></Technologies>
+          <Technologies />
+          <Projects />
         </Container>
         <Space />
       </Phone>

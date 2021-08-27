@@ -58,11 +58,11 @@ const Button = styled.button`
     height: 100%;
     top: 10px;
     right: 10px;
-    transition: 0.2s;
+    transition: 0.3s;
   }
   :hover::after {
-    top: 0px;
-    left: 0px;
+    top: -10px;
+    right: -10px;
   }
 `
 
