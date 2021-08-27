@@ -1,16 +1,14 @@
 import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
-import "./layout.css"
+import "./../styles/global.css"
 import gsap from "gsap"
 
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Mountains from "../components/Mountains.js"
-import Component from "./../../.cache/dev-404-page"
 
 import NavBar from "../components/navbar/NavBar"
 import Main from "./../components/Main"
-import Technologies from "../components/Technologies"
-import Title from "./../components/Title"
+import Technologies from "../components/technologies/Technologies"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -64,10 +62,7 @@ function IndexPage() {
           <Box>
             <Mountains></Mountains>{" "}
           </Box>
-          <Title title="Technologies">
-            These are the technologies I work with currently or used in my past
-            projects.
-          </Title>
+          <Technologies></Technologies>
         </Container>
         <Space />
       </Phone>

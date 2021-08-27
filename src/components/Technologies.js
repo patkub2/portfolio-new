@@ -62,7 +62,7 @@ export default function Technologies() {
       <Title>
         <Line />{" "}
         <div>
-          <Text>Technologies</Text>
+          <Text>Technologiessssss</Text>
           <TextSm>
             These are the technologies I work with currently or used in my past
             projects.
