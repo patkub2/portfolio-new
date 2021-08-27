@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 const Container = styled.div`
-  margin-left: 30px;
   border: 1px solid blue; /* BORDER TEST*/
 
   height: auto;
@@ -14,7 +13,7 @@ const Container = styled.div`
   cursor: pointer;
   position: relative;
   background-color: white;
-  width: 50%;
+  width: 100%;
 
   ::after {
     content: "";
@@ -36,12 +35,6 @@ const Img = styled.img`
   padding: 0;
   border-radius: 7px;
   cursor: pointer;
-  filter: grayscale(100%);
-
-  :hover {
-    filter: grayscale(0);
-    transition: 0.3s;
-  }
 `
 
 export default function Picture(prop) {

@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import image1 from "../../images/image1.png"
 import Title from "../Title"
-import Picture from "./Picture"
 import Site from "./Site"
 
 const Container = styled.div`
@@ -25,8 +24,16 @@ export default function Projects() {
         Bellow you can find most of my project. All of them got a live version
         and an open github repo
       </Title>
-      <Site>
-        <Picture img={image1} />
+      <Site img={image1} title="Booktlify">
+        Pariatur duis sunt fugiat et fugiat ea mollit aliqua incididunt.
+        Reprehenderit deserunt amet nisi cillum mollit est dolore incididunt
+        velit eiusmod. Excepteur reprehenderit deserunt ut veniam qui anim
+        ullamco nisi tempor consequat esse laborum voluptate ad. Adipisicing
+        dolor aliqua voluptate commodo enim laboris sunt laboris laboris nostrud
+        eiusmod ut proident. Exercitation eiusmod quis tempor proident eu qui
+        esse nisi commodo fugiat. Enim ipsum qui aliqua dolor sit ea et Lorem
+        voluptate commodo irure ullamco. Ipsum duis cillum laboris laborum ad
+        velit ipsum cillum Lorem deserunt reprehenderit.
       </Site>
     </Container>
   )
