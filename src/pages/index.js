@@ -17,7 +17,6 @@ const Container = styled.div`
   //border: 1px solid yellow; /* BORDER TEST*/
   padding: 0;
   margin: 0;
-  height: 100vh;
 
   //background-color: #130d0a;
   font-family: "Rubik", sans-serif;
@@ -60,9 +59,7 @@ function IndexPage() {
           <Box>
             <Main />
           </Box>
-          <Box>
-            <Mountains></Mountains>{" "}
-          </Box>
+          <Mountains></Mountains> <Box></Box>
           <Technologies />
           <Projects />
         </Container>

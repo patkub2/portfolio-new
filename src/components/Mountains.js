@@ -19,14 +19,16 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Container = styled.div`
   position: relative;
-  //border: 1px solid yellow; /* BORDER TEST*/
+  border: 2px solid white; /* BORDER TEST*/
   padding: 0;
   margin: 0;
-  height: 100%;
+  height: 100vw;
+  width: 100vw;
   display: flex;
   overflow: hidden;
   justify-content: flex-start;
   align-items: center;
+
   .im1 {
     z-index: 1;
     background-image: url(${im1});
@@ -67,7 +69,8 @@ const Container = styled.div`
   .impla {
     z-index: 10;
     background-image: url(${impla});
-    background-size: 100vw 50vh;
+    //background-size: 100vw 50vh;
+    background-size: cover;
     background-position: left;
   }
   .imbgcolor {
@@ -85,7 +88,7 @@ const Container = styled.div`
 `
 const Box = styled.div`
   position: absolute;
-  //border: 1px solid red; /* BORDER TEST*/
+  //border: 1px solid blue; /* BORDER TEST*/
   color: black;
   padding: 0;
   margin: 0;
@@ -94,7 +97,6 @@ const Box = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  background-size: 100vw 50vh;
 `
 
 function Mountains() {

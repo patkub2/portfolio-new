@@ -3,9 +3,10 @@ import styled from "styled-components"
 import image1 from "../../images/image1.png"
 import Title from "../Title"
 import Site from "./Site"
+import { media, colors } from "../../utils"
 
 const Container = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
+  border: 1px solid ${colors.black}; /* BORDER TEST*/
   display: flex;
   //flex-direction: column;
   //justify-content: center;
