@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
-  //border: 1px solid blue; /* BORDER TEST*/
+  border: 1px solid blue; /* BORDER TEST*/
 
   display: flex;
   //flex-direction: column;
@@ -13,6 +13,7 @@ const Container = styled.div`
   font-weight: 300;
   font-size: 24px;
   height: 100px;
+  margin: 10vh 0;
 `
 const TextContainer = styled.div`
   //border: 1px solid green; /* BORDER TEST*/

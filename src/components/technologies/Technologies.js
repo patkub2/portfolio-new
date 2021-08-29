@@ -2,17 +2,21 @@ import React from "react"
 import styled from "styled-components"
 import Apps from "./Apps"
 import Title from "../Title"
-
+import { colors, media } from "../../utils"
 const AppsContainer = styled.div`
+  border: 1px solid red; /* BORDER TEST*/
   display: flex;
   //flex-direction: column;
-  //justify-content: center;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
   width: 100%;
+  ${media.desktop`
+    width: 50vw;
+  `}
 `
 
 export default function Technologies() {

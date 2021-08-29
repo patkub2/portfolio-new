@@ -14,6 +14,7 @@ import imbg from "../images/bg.png"
 import impla from "../images/bgpla.png"
 import birds from "../images/birds.png"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { colors, media } from "../utils"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -22,12 +23,16 @@ const Container = styled.div`
   border: 2px solid white; /* BORDER TEST*/
   padding: 0;
   margin: 0;
-  height: 100vw;
-  width: 100vw;
+  height: 70vw;
+  width: 70vw;
   display: flex;
   overflow: hidden;
   justify-content: flex-start;
   align-items: center;
+  ${media.desktop`
+    width: 50vw;
+    height: 50vw;
+  `}
 
   .im1 {
     z-index: 1;

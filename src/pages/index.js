@@ -5,7 +5,7 @@ import gsap from "gsap"
 
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Mountains from "../components/Mountains.js"
-
+import { colors, media } from "../utils"
 import NavBar from "../components/navbar/NavBar"
 import Main from "./../components/Main"
 import Technologies from "../components/technologies/Technologies"
@@ -22,19 +22,28 @@ const Container = styled.div`
   font-family: "Rubik", sans-serif;
   color: black;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 `
 
 const Box = styled.div`
-  //border: 1px solid black; /* BORDER TEST*/
-
+  // border: 1px solid black; /* BORDER TEST*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   overflow: hidden;
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 50vh;
+  min-height: 50vw;
+  ${media.desktop`
+    width: 49vw;
+    height: 100vh;
+    justify-content: flex-end;
+    
+  `}
 `
 const Space = styled.div`
   min-height: 2000px;
@@ -59,7 +68,9 @@ function IndexPage() {
           <Box>
             <Main />
           </Box>
-          <Mountains></Mountains> <Box></Box>
+          <Box>
+            <Mountains></Mountains>
+          </Box>
           <Technologies />
           <Projects />
         </Container>
