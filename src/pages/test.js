@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
 import "./../styles/global.css"
 import gsap from "gsap"
-import phonesvg from "../images/phonesvg.svg"
+import Phone from "../images/phone.svg"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import Mountains from "../components/Mountains.js"
 import { colors, media } from "../utils"
@@ -57,11 +57,18 @@ const Conf = styled.div`
   font-family: "Rubik", sans-serif;
 `
 function TestPage() {
+  const wrapper = useRef(null)
+
+  useEffect(() => {
+    //const [elements] = wrapper.current.children
+    //const shadow = elements.getElementById("")
+  })
+
   return (
     <>
       <Container>
         <Box>
-          <Img src={phonesvg}></Img>
+          <Phone />
         </Box>
       </Container>
     </>
