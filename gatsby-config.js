@@ -7,10 +7,18 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
-          include: /\.inline\.svg$/,
+          include: /images\/.*\.svg/,
+          omitKeys: [
+            "xmlnsDc",
+            "xmlnsCc",
+            "xmlnsRdf",
+            "xmlnsSvg",
+            "xmlnsSodipodi",
+            "xmlnsInkscape",
+          ],
         },
       },
     },
@@ -38,6 +46,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-styled-components`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
