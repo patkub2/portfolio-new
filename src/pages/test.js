@@ -2,28 +2,31 @@ import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
 import "./../styles/global.css"
 import { gsap } from "gsap"
-import Phone from "../images/phone.svg"
+import Phone from "../images/svg/phone.svg"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import Mountains from "../components/Mountains.js"
-import { colors, media } from "../utils"
-import NavBar from "../components/navbar/NavBar"
-import Main from "./../components/Main"
-import Technologies from "../components/technologies/Technologies"
-import Projects from "../components/projects/Projects"
 
 gsap.registerPlugin(ScrollTrigger)
+
+const Box = styled.div`
+  border: 1px solid black; /* BORDER TEST*/
+  height: 700px;
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+`
 
 const Container = styled.div`
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-  background-color: #ffc30f;
 `
 const Shadow = styled.div`
   width: 60px;
@@ -34,51 +37,65 @@ const Shadow = styled.div`
     rgba(237, 237, 237, 0) 50%
   );
   position: relative;
-  z-index: 1;
+  z-index: 10;
   transform: translateY(75px);
   opacity: 0.1;
+  margin-bottom: 200px;
 `
 const Ball = styled.div`
-  width: 60px;
-  height: 60px;
+  z-index: 11;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  background-color: #c70039;
-  background: linear-gradient(
-    to bottom,
-    rgba(199, 0, 56, 1) 0%,
-    rgba(144, 12, 63, 1) 100%
-  );
+  background-color: #000d99;
   transform: translateY(-100px);
 `
 
 function TestPage() {
-  const el = useRef()
-  var tl = gsap.timeline({ repeat: -1, yoyo: true })
+  const wrapper = useRef(null)
+
   useEffect(() => {
+    const [elements] = wrapper.current.children
+
+    const ball = elements.querySelector("#ball")
+    const shadowBall = elements.querySelector("#shadowBall")
+    const phone = elements.querySelector("#phone")
+    const shadow = elements.querySelector("#shadow")
+
+    const tl = gsap.timeline({ repeat: -1, yoyo: true })
+    const t2 = gsap.timeline({ repeat: -1, yoyo: true })
+
+    gsap.set(ball, { y: -200, fill: "rgba(255,0,0,0.5)" })
+    gsap.set(shadowBall, { opacity: 0.01, width: 30 })
+
+    var fills = ["rgba(255,0,0,0.5)", "rgba(0,255,0,0.5)", "rgba(0,0,255,0.5)"],
+      index = -1
     // Target any descendant with the class of .box - no matter how far down the descendant tree. Uses el.current.querySelectorAll() internally
+
     tl.add("start")
-      .to(".ball", {
-        y: 100,
+      .to(ball, {
+        y: 0,
         duration: 0.5,
         ease: "circ.in",
       })
       .to(
-        ".ball",
+        ball,
         {
           scaleY: 0.6,
           transformOrigin: "center bottom",
           borderBottomLeftRadius: "40%",
           borderBottomRightRadius: "40%",
+          fill: "blue",
           duration: 0.1,
           ease: "circ.in",
         },
         "-=.05"
       )
       .to(
-        ".shadow",
+        shadowBall,
         {
-          width: 90,
-          opacity: 0.7,
+          width: 70,
+          opacity: 0.5,
           duration: 0.5,
           ease: "circ.in",
         },
@@ -86,9 +103,11 @@ function TestPage() {
       )
   }, [])
   return (
-    <Container ref={el}>
-      <Ball className="ball"></Ball>
-      <Shadow className="shadow"></Shadow>
+    <Container ref={wrapper}>
+      <Box>
+        {" "}
+        <Phone />
+      </Box>
     </Container>
   )
 }

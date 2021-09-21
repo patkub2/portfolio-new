@@ -7,18 +7,10 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-react-svg`,
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /images\/.*\.svg/,
-          omitKeys: [
-            "xmlnsDc",
-            "xmlnsCc",
-            "xmlnsRdf",
-            "xmlnsSvg",
-            "xmlnsSodipodi",
-            "xmlnsInkscape",
-          ],
+          include: /svg/,
         },
       },
     },
