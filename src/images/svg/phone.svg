@@ -1,18 +1,29 @@
-<svg width="555" height="770" viewBox="0 0 555 770" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="555" height="770" viewBox="0 0 555 770" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="Frame 1">
-<g id="shadow">
-<path id="shadow_2" d="M373.199 385.096L528.875 474.567C546.092 484.462 547.145 508.685 530.844 519.883L207.847 741.754C199.059 747.791 187.486 748.128 178.31 742.614L24.0145 649.888C7.14405 639.75 6.40028 615.789 22.6139 604.768L344.231 386.151C352.851 380.292 364.126 379.881 373.199 385.096Z" fill="#CFCFCF" stroke="#CFCFCF" stroke-width="14"/>
+
+<path id="shadow" d="M528.875 474.567C546.092 484.462 547.145 508.685 530.844 519.883L207.847 741.754C199.059 747.791 187.486 748.128 178.31 742.614L24.0145 649.888C7.1441 639.75 6.40023 615.789 22.6139 604.768L344.231 386.151C352.851 380.292 364.126 379.881 373.199 385.096L528.875 474.567Z" fill="#CFCFCF" stroke="#CFCFCF" stroke-width="14"/>
+<g id="phone"><path id="rama" d="M530.896 393.548C548.113 403.443 549.166 427.666 532.865 438.864L209.868 660.735C201.08 666.772 189.507 667.109 180.331 661.595L26.0355 568.87C9.1651 558.731 8.42123 534.77 24.6349 523.749L346.252 305.132C354.872 299.273 366.147 298.862 375.22 304.077L530.896 393.548Z" fill="white" stroke="#535353" stroke-width="14"/>
+<path id="rama2" d="M529.583 383.557C546.801 393.452 547.853 417.675 531.552 428.873L208.555 650.745C199.767 656.781 188.194 657.118 179.019 651.604L24.723 558.879C7.85259 548.74 7.10873 524.779 23.3224 513.758L344.939 295.141C353.559 289.282 364.834 288.871 373.908 294.086L529.583 383.557Z" fill="white" stroke="#535353" stroke-width="14"/>
+<path id="screen" d="M527.528 423.145C539.603 414.851 538.823 396.907 526.069 389.578L370.394 300.107C363.672 296.244 355.321 296.548 348.936 300.889L27.3187 519.506C15.3086 527.669 15.8595 545.418 28.3562 552.928L182.652 645.653C189.448 649.738 198.021 649.488 204.531 645.017L527.528 423.145Z" fill="white"/>
+<path id="microphone" d="M484.233 368.667C488.161 362.491 486.176 354.341 479.845 350.652L425.22 318.824C419.341 315.398 411.768 317.092 407.915 322.694C403.703 328.818 405.563 337.17 411.976 340.934L466.497 372.937C472.581 376.509 480.45 374.614 484.233 368.667Z" fill="#535353"/>
 </g>
-<g id="phone">
-<path id="Rectangle 23" d="M375.22 304.077L530.896 393.548C548.113 403.443 549.166 427.666 532.865 438.864L209.868 660.735C201.08 666.772 189.507 667.109 180.331 661.595L26.0355 568.87C9.16504 558.731 8.42128 534.77 24.6349 523.749L346.252 305.132C354.872 299.273 366.147 298.862 375.22 304.077Z" fill="white" stroke="#535353" stroke-width="14"/>
-<path id="Rectangle 8" d="M373.908 294.086L529.583 383.557C546.801 393.452 547.853 417.675 531.552 428.873L208.555 650.744C199.767 656.781 188.194 657.118 179.019 651.604L24.723 558.879C7.85253 548.74 7.10878 524.779 23.3224 513.758L344.939 295.141C353.559 289.282 364.834 288.871 373.908 294.086Z" fill="white" stroke="#535353" stroke-width="14"/>
-<path id="Rectangle 9" d="M484.233 368.667C488.161 362.491 486.176 354.341 479.845 350.652L425.22 318.824C419.341 315.398 411.768 317.092 407.915 322.694V322.694C403.703 328.818 405.563 337.17 411.976 340.934L466.497 372.937C472.581 376.509 480.45 374.614 484.233 368.667V368.667Z" fill="#535353"/>
-</g>
-<g id="shadowBall">
-<ellipse id="Ellipse 3" cx="265" cy="482" rx="64" ry="14" fill="#C4C4C4"/>
+<g id="ballShadow" filter="url(#filter0_f)">
+<ellipse cx="265" cy="481.5" rx="51" ry="9.5" fill="#C4C4C4"/>
 </g>
 <g id="ball">
-<circle id="Ellipse 2" cx="265" cy="421" r="61" fill="#B60000"/>
+<circle id="ballcolor" cx="265" cy="421" r="61" fill="#B60000"/>
+<circle id="ballimg" cx="265" cy="421" r="61" fill="url(#pattern0)"/>
 </g>
 </g>
+<defs>
+<filter id="filter0_f" x="210" y="468" width="110" height="27" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur"/>
+</filter>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#imageball" transform="translate(0 0.146484) scale(0.00078125)"/>
+</pattern>
+<image id="imageball" data-name="reacticon(edit).png" width="1280" height="905" href="https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png"/></defs>
+
 </svg>

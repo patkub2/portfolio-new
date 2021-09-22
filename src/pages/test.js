@@ -3,6 +3,7 @@ import styled from "styled-components"
 import "./../styles/global.css"
 import { gsap } from "gsap"
 import Phone from "../images/svg/phone.svg"
+import email from "../images/icons/email.svg"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -28,28 +29,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 `
-const Shadow = styled.div`
-  width: 60px;
-  height: 30px;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(88, 24, 69, 1) 0%,
-    rgba(237, 237, 237, 0) 50%
-  );
-  position: relative;
-  z-index: 10;
-  transform: translateY(75px);
-  opacity: 0.1;
-  margin-bottom: 200px;
-`
-const Ball = styled.div`
-  z-index: 11;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #000d99;
-  transform: translateY(-100px);
-`
 
 function TestPage() {
   const wrapper = useRef(null)
@@ -58,16 +37,43 @@ function TestPage() {
     const [elements] = wrapper.current.children
 
     const ball = elements.querySelector("#ball")
-    const shadowBall = elements.querySelector("#shadowBall")
+    const ballcolor = elements.querySelector("#ballcolor")
+    const ballimg = elements.querySelector("#ballimg")
+    const imageball = elements.querySelector("#imageball")
+
+    const shadowBall = elements.querySelector("#ballShadow")
     const phone = elements.querySelector("#phone")
+    const phoneScreen = elements.querySelector("#phoneScreen")
     const shadow = elements.querySelector("#shadow")
-
     const tl = gsap.timeline({ repeat: -1, yoyo: true })
-    const t2 = gsap.timeline({ repeat: -1, yoyo: true })
+    const t2 = gsap.timeline({ repeat: -1 })
 
-    gsap.set(ball, { y: -200, fill: "rgba(255,0,0,0.5)" })
-    gsap.set(shadowBall, { opacity: 0.01, width: 30 })
+    t2.to(ballimg, {
+      duration: 1,
+      rotate: 180,
+      transformOrigin: "50% 50%",
+      ease: "none",
+    })
 
+    gsap.set(ball, { y: -200 })
+    gsap.set(shadow, { y: -10 })
+    gsap.set(ballcolor, { fill: "blue" })
+    gsap.set(shadowBall, { opacity: 0.01, width: 1 })
+    gsap.set(imageball, {
+      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png",
+    })
+
+    const technologies = [
+      { name: "HTML5", icon: htmlIcon },
+      { name: "CSS3", icon: cssIcon },
+      { name: "Sass/SCSS", icon: sassIcon },
+      { name: "JavaScript", icon: jsIcon },
+      { name: "TypeScript", icon: tsIcon },
+      { name: "React", icon: reactIcon },
+      { name: "Redux", icon: reduxIcon },
+      { name: "Gatsby", icon: gatsbyIcon },
+      { name: "Git", icon: gitIcon },
+    ]
     var fills = ["rgba(255,0,0,0.5)", "rgba(0,255,0,0.5)", "rgba(0,0,255,0.5)"],
       index = -1
     // Target any descendant with the class of .box - no matter how far down the descendant tree. Uses el.current.querySelectorAll() internally
@@ -76,6 +82,7 @@ function TestPage() {
       .to(ball, {
         y: 0,
         duration: 0.5,
+
         ease: "circ.in",
       })
       .to(
@@ -85,16 +92,37 @@ function TestPage() {
           transformOrigin: "center bottom",
           borderBottomLeftRadius: "40%",
           borderBottomRightRadius: "40%",
-          fill: "blue",
+
           duration: 0.1,
           ease: "circ.in",
         },
         "-=.05"
       )
       .to(
+        phone,
+        {
+          y: -10,
+          duration: 0.5,
+
+          ease: "circ.in",
+        },
+        "start"
+      )
+      .to(
+        shadow,
+        {
+          y: 0,
+          duration: 0.5,
+
+          ease: "circ.in",
+        },
+        "start"
+      )
+      .to(
         shadowBall,
         {
-          width: 70,
+          y: -10,
+          width: 20,
           opacity: 0.5,
           duration: 0.5,
           ease: "circ.in",
