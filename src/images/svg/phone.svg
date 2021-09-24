@@ -12,7 +12,8 @@
 </g>
 <g id="ball">
 <circle id="ballcolor" cx="265" cy="421" r="61" fill="#B60000"/>
-<circle id="ballimg" cx="265" cy="421" r="61" fill="url(#pattern0)"/>
+<circle id="ballimg" cx="265" cy="421" r="61" fill="url(#pattern1)"/>
+
 </g>
 </g>
 <defs>
@@ -24,6 +25,13 @@
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#imageball" transform="translate(0 0.146484) scale(0.00078125)"/>
 </pattern>
-<image id="imageball" data-name="reacticon(edit).png" width="1280" height="905" href="https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png"/></defs>
+<image id="imageball"  width="1280" height="905" href="https://logos-download.com/wp-content/uploads/2016/09/React_logo_logotype_emblem.png"/>
+
+<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#pattern11" transform="translate(0 0.146484) scale(0.00078125)"/>
+</pattern>
+<image id="pattern11"  width="1280" height="905" href="static/svg/pngegg.png"/>
+
+</defs>
 
 </svg>
