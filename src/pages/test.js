@@ -86,19 +86,13 @@ function TestPage() {
     const phoneScreen = elements.querySelector("#phoneScreen")
     const shadow = elements.querySelector("#shadow")
     const tl = gsap.timeline({ repeat: -1, yoyo: true })
-    const t2 = gsap.timeline({ repeat: -1 })
+    const t2 = gsap.timeline({ repeat: -1, delay: 0.5 })
+    const t4 = gsap.timeline({ repeat: 0 })
 
     gsap.set(ballNew, { y: 0 })
-    gsap.set(image, { y: 265, attr: { src: htmlIcon } })
+    gsap.set(image, { y: 265, attr: { src: htmlIcon }, autoAlpha: 0 })
     gsap.set(shadow, { y: -10 })
     gsap.set(shadowBall, { opacity: 0.01, width: 1, y: 310 })
-
-    t2.to("S", {
-      duration: 5,
-      rotate: 360,
-      transformOrigin: "50% 50%",
-      ease: "none",
-    })
 
     const technologies = [
       { name: "HTML5", icon: htmlIcon },
@@ -175,6 +169,16 @@ function TestPage() {
         },
         "start"
       )
+    technologies.map(({ name, icon }) => {
+      t2.set(image, { autoAlpha: 0, attr: { src: icon } })
+        .to(image, { autoAlpha: 1, duration: 0.01 })
+        .to(image, {
+          autoAlpha: 1,
+          duration: 0.54,
+        })
+        .to(image, { autoAlpha: 1, duration: 0.54 })
+        .to(image, { autoAlpha: 0, duration: 0.01 })
+    })
   }, [])
   return (
     <Container ref={wrapper}>
