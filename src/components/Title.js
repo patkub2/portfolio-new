@@ -12,11 +12,12 @@ const Container = styled.div`
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
-  height: 100px;
+  min-height: 100px;
   margin: 10vh 0;
 `
 const TextContainer = styled.div`
-  //border: 1px solid green; /* BORDER TEST*/
+  border: 1px solid green; /* BORDER TEST*/
+  //border-left: 8px solid black; /* BORDER TEST*/
   width: 80%;
   height: 100%;
   display: flex;
@@ -27,7 +28,7 @@ const TextContainer = styled.div`
   font-size: 42px;
 `
 const TextB = styled.div`
-  //border: 1px solid red; /* BORDER TEST*/
+  border: 1px solid red; /* BORDER TEST*/
   margin-top: 2%;
   margin-left: 2%;
   display: flex;
@@ -38,7 +39,7 @@ const TextB = styled.div`
   font-size: 42px;
 `
 const TextSm = styled.div`
-  //border: 1px solid red; /* BORDER TEST*/
+  border: 1px solid red; /* BORDER TEST*/
   width: 100%;
   display: flex;
   align-items: center;
