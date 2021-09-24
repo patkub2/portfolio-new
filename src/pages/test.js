@@ -43,11 +43,7 @@ const Ball = styled.div`
   justify-content: center;
   border-radius: 50%;
   background-color: #c70039;
-  background: linear-gradient(
-    to bottom,
-    rgba(199, 0, 56, 1) 0%,
-    rgba(144, 12, 63, 1) 100%
-  );
+
   transform: translateY(-100px);
   z-index: 5;
 `
@@ -86,24 +82,24 @@ function TestPage() {
     const phoneScreen = elements.querySelector("#phoneScreen")
     const shadow = elements.querySelector("#shadow")
     const tl = gsap.timeline({ repeat: -1, yoyo: true })
-    const t2 = gsap.timeline({ repeat: -1, delay: 0.5 })
+    const t2 = gsap.timeline({ repeat: -1, delay: 0.55 })
     const t4 = gsap.timeline({ repeat: 0 })
 
-    gsap.set(ballNew, { y: 0 })
+    gsap.set(ballNew, { y: 0, backgroundColor: "#DE4C36" })
     gsap.set(image, { y: 265, attr: { src: htmlIcon }, autoAlpha: 0 })
     gsap.set(shadow, { y: -10 })
     gsap.set(shadowBall, { opacity: 0.01, width: 1, y: 310 })
 
     const technologies = [
-      { name: "HTML5", icon: htmlIcon },
-      { name: "CSS3", icon: cssIcon },
-      { name: "Sass/SCSS", icon: sassIcon },
-      { name: "JavaScript", icon: jsIcon },
-      { name: "TypeScript", icon: tsIcon },
-      { name: "React", icon: reactIcon },
-      { name: "Redux", icon: reduxIcon },
-      { name: "Gatsby", icon: gatsbyIcon },
-      { name: "Git", icon: gitIcon },
+      { name: "#F16529", icon: htmlIcon },
+      { name: "#2965F1", icon: cssIcon },
+      { name: "#CD6799", icon: sassIcon },
+      { name: "#F7DF1E", icon: jsIcon },
+      { name: "#007ACC", icon: tsIcon },
+      { name: "#00D8FF", icon: reactIcon },
+      { name: "#764ABC", icon: reduxIcon },
+      { name: "#744C9E", icon: gatsbyIcon },
+      { name: "#DE4C36", icon: gitIcon },
     ]
 
     // Target any descendant with the class of .box - no matter how far down the descendant tree. Uses el.current.querySelectorAll() internally
@@ -171,6 +167,7 @@ function TestPage() {
       )
     technologies.map(({ name, icon }) => {
       t2.set(image, { autoAlpha: 0, attr: { src: icon } })
+        .set(ballNew, { backgroundColor: name })
         .to(image, { autoAlpha: 1, duration: 0.01 })
         .to(image, {
           autoAlpha: 1,
