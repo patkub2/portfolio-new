@@ -10,6 +10,7 @@ import NavBar from "../components/navbar/NavBar"
 import Main from "./../components/Main"
 import Technologies from "../components/technologies/Technologies"
 import Projects from "../components/projects/Projects"
+import Space from "../components/Space"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -28,7 +29,7 @@ const Container = styled.div`
 `
 
 const Box = styled.div`
-  // border: 1px solid black; /* BORDER TEST*/
+  //border: 1px solid black; /* BORDER TEST*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +46,7 @@ const Box = styled.div`
     
   `}
 `
-const Space = styled.div`
+const Space2 = styled.div`
   min-height: 2000px;
 `
 const Con = styled.div`
@@ -71,10 +72,12 @@ function IndexPage() {
           <Box>
             <Mountains></Mountains>
           </Box>
+          <Space />
           <Technologies />
+          <Space />
           <Projects />
         </Container>
-        <Space />
+        <Space2 />
       </Phone>
     </Conf>
   )

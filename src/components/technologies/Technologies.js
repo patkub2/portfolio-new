@@ -3,8 +3,18 @@ import styled from "styled-components"
 import Apps from "./Apps"
 import Title from "../Title"
 import { colors, media } from "../../utils"
+import BallAnimation from "./BallAnimation"
+const Container = styled.div`
+  //border: 1px solid red; /* BORDER TEST*/
+  display: flex;
+  //flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+`
 const AppsContainer = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
+  //border: 1px solid red; /* BORDER TEST*/
   display: flex;
   //flex-direction: column;
   justify-content: center;
@@ -15,18 +25,20 @@ const AppsContainer = styled.div`
   font-size: 24px;
   width: 100%;
   ${media.desktop`
-    width: 50vw;
+  min-width: 150px;
+    width: 50%;
+    max-width: 700px;
   `}
 `
 
 export default function Technologies() {
   return (
-    <div>
-      <Title title="Technologies">
-        These are the technologies I work with currently or used in my past
-        projects.
-      </Title>
+    <Container>
       <AppsContainer>
+        <Title title="Technologies">
+          These are the technologies I work with currently or used in my past
+          projects.
+        </Title>
         <Apps>HTML</Apps>
         <Apps>Css</Apps>
         <Apps>Sass</Apps>
@@ -52,6 +64,7 @@ export default function Technologies() {
         <Apps>Styled Comp</Apps>
         <Apps>Formik</Apps>
       </AppsContainer>
-    </div>
+      <BallAnimation />
+    </Container>
   )
 }

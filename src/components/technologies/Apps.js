@@ -12,9 +12,9 @@ const Container = styled.div`
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
-  width: 35%;
+  width: 45%;
   img {
-    border: 1px solid blue; /* BORDER TEST*/
+    // border: 1px solid blue; /* BORDER TEST*/
     margin: 0;
     padding: 0;
     width: 50px;

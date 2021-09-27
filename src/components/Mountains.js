@@ -13,6 +13,8 @@ import im8 from "../images/8.png"
 import imbg from "../images/bg.png"
 import impla from "../images/bgpla.png"
 import birds from "../images/birds.png"
+import mountains from "../images/mountains.png"
+import lake from "../images/lake.png"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { colors, media } from "../utils"
 
@@ -34,33 +36,13 @@ const Container = styled.div`
     height: 50vw;
   `}
 
-  .im1 {
+  .mountains {
     z-index: 1;
-    background-image: url(${im1});
+    background-image: url(${mountains});
   }
-  .im2 {
+  .lake {
     z-index: 2;
-    background-image: url(${im2});
-  }
-  .im3 {
-    z-index: 3;
-    background-image: url(${im3});
-  }
-  .im4 {
-    z-index: 4;
-    background-image: url(${im4});
-  }
-  .im5 {
-    z-index: 5;
-    background-image: url(${im5});
-  }
-  .im6 {
-    z-index: 6;
-    background-image: url(${im6});
-  }
-  .im7 {
-    z-index: 7;
-    background-image: url(${im7});
+    background-image: url(${lake});
   }
   .im8 {
     z-index: 8;
@@ -116,48 +98,18 @@ function Mountains() {
         scrub: true,
       },
     })
-    gsap.to(".im1", {
+    gsap.to(".mountains", {
       yPercent: -5,
       ease: "none",
       scrollTrigger: {
         trigger: ".impla",
         start: "top top", // the default values
         end: "bottom top",
-        scrub: true,
+        scrub: 3,
       },
     })
-    gsap.to(".im3", {
-      yPercent: -10,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".impla",
-        start: "top top", // the default values
-        end: "bottom top",
-        scrub: true,
-      },
-    })
-    gsap.to(".im4", {
-      yPercent: -5,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".impla",
-        start: "top top", // the default values
-        end: "bottom top",
-        scrub: true,
-      },
-    })
-    gsap.to(".im7", {
-      yPercent: 5,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".impla",
-        start: "top top", // the default values
-        end: "bottom top",
-        scrub: true,
-      },
-    })
-    gsap.to(".im6", {
-      yPercent: 5,
+    gsap.to(".lake", {
+      yPercent: 10,
       ease: "none",
       scrollTrigger: {
         trigger: ".impla",
@@ -174,7 +126,7 @@ function Mountains() {
         trigger: ".impla",
         start: "top center", // the default values
         end: "bottom top",
-        scrub: true,
+        scrub: 3,
       },
     })
   }, [])
@@ -184,13 +136,8 @@ function Mountains() {
       <Box className="imbg" />
       <Box className="birds" />
       <Box className="im8" />
-      <Box className="im7" />
-      <Box className="im6" />
-      <Box className="im5" />
-      <Box className="im4" />
-      <Box className="im3" />
-      <Box className="im2" />
-      <Box className="im1" />
+      <Box className="mountains" />
+      <Box className="lake" />
       <Box className="imbgcolor" />
     </Container>
   )
