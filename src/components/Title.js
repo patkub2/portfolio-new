@@ -37,7 +37,7 @@ const TextB = styled.div`
   width: 100%;
   height: 26%;
   font-weight: 300;
-  font-size: 42px;
+  font-size: 54px;
 `
 const TextSm = styled.div`
   // border: 1px solid red; /* BORDER TEST*/

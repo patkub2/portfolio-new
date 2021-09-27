@@ -99,17 +99,17 @@ function Mountains() {
       },
     })
     gsap.to(".mountains", {
-      yPercent: -5,
+      yPercent: -15,
       ease: "none",
       scrollTrigger: {
         trigger: ".impla",
         start: "top top", // the default values
         end: "bottom top",
-        scrub: 3,
+        scrub: 1,
       },
     })
     gsap.to(".lake", {
-      yPercent: 10,
+      yPercent: 5,
       ease: "none",
       scrollTrigger: {
         trigger: ".impla",
