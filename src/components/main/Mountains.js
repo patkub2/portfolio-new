@@ -1,34 +1,27 @@
 import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
-import "./layout.css"
+import ".././layout.css"
 import gsap from "gsap"
-import im1 from "../images/1.png"
-import im2 from "../images/2.png"
-import im3 from "../images/3.png"
-import im4 from "../images/4.png"
-import im5 from "../images/5.png"
-import im6 from "../images/6.png"
-import im7 from "../images/7.png"
-import im8 from "../images/8.png"
-import imbg from "../images/bg.png"
-import impla from "../images/bgpla.png"
-import birds from "../images/birds.png"
-import mountains from "../images/mountains.png"
-import lake from "../images/lake.png"
+import im8 from "../../images/8.png"
+import imbg from "../../images/bg.png"
+import impla from "../../images/bgpla.png"
+import birds from "../../images/birds.png"
+import mountains from "../../images/mountains.png"
+import lake from "../../images/lake.png"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { colors, media } from "../utils"
+import { colors, media } from "../../utils"
 
 gsap.registerPlugin(ScrollTrigger)
 
 const Container = styled.div`
   position: relative;
-  border: 2px solid white; /* BORDER TEST*/
+  // border: 2px solid red; /* BORDER TEST*/
   padding: 0;
   margin: 0;
-  height: 70vw;
-  width: 70vw;
   display: flex;
   overflow: hidden;
+  width: 80vw;
+  height: 80vw;
   justify-content: flex-start;
   align-items: center;
   ${media.desktop`

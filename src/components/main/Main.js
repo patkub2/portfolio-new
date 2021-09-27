@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-import { colors, media } from "../utils"
+import { colors, media } from "../../utils"
 const Container = styled.div`
-  padding-top: 72px;
+  margin: 72px 0;
   //border: 1px solid red; /* BORDER TEST*/
-  margin-right: 5vw;
-  height: 100%;
+  margin-right: 0vw;
+  min-height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,7 +15,7 @@ const Container = styled.div`
   font-weight: 300;
   font-size: 24px;
   ${media.desktop`
-    
+  margin-right: 5vw;
     align-items: flex-end;
     
   `}

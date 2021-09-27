@@ -6,7 +6,7 @@ import Site from "./Site"
 import { media, colors } from "../../utils"
 
 const Container = styled.div`
-  border: 1px solid ${colors.black}; /* BORDER TEST*/
+  // border: 1px solid ${colors.black}; /* BORDER TEST*/
   display: flex;
   //flex-direction: column;
   //justify-content: center;
