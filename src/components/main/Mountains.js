@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Container = styled.div`
   position: relative;
-  // border: 2px solid red; /* BORDER TEST*/
+
   padding: 0;
   margin: 0;
   display: flex;
@@ -32,29 +32,43 @@ const Container = styled.div`
   .mountains {
     z-index: 1;
     background-image: url(${mountains});
+    padding: 0;
+    margin: 0;
   }
   .lake {
     z-index: 2;
     background-image: url(${lake});
+    padding: 0;
+    margin: 0;
   }
   .im8 {
     z-index: 8;
     background-image: url(${im8});
+    padding: 0;
+    margin: 0;
   }
   .birds {
     z-index: 8;
     background-image: url(${birds});
+    padding: 0;
+    margin: 0;
     overflow: hidden;
   }
   .impla {
     z-index: 10;
     background-image: url(${impla});
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 2px solid white;
     //background-size: 100vw 50vh;
     background-size: cover;
     background-position: left;
   }
   .imbgcolor {
     z-index: 0;
+    padding: 0;
+    margin: 0;
     background: linear-gradient(
       180deg,
       rgba(165, 212, 234, 1) 52%,
@@ -63,17 +77,21 @@ const Container = styled.div`
   }
   .imbg {
     z-index: 1;
+    padding: 0;
+    margin: 0;
     background-image: url(${imbg});
   }
 `
 const Box = styled.div`
   position: absolute;
+  right: -2%;
+  bottom: -1%;
   //border: 1px solid blue; /* BORDER TEST*/
   color: black;
   padding: 0;
   margin: 0;
-  width: 100%;
-  height: 100%;
+  width: 103%;
+  height: 103%;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -81,6 +99,8 @@ const Box = styled.div`
 
 function Mountains() {
   useEffect(() => {
+    gsap.set(".im8", { y: 2 })
+
     gsap.to(".im8", {
       yPercent: 15,
       ease: "none",

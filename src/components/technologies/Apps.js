@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import arrow from "../../images/arrow.svg"
 const Container = styled.div`
-  //border: 1px solid blue; /* BORDER TEST*/
+  border: 1px solid blue; /* BORDER TEST*/
 
   display: flex;
   //flex-direction: column;
@@ -22,7 +22,7 @@ const Container = styled.div`
 `
 
 const TextSm = styled.div`
-  //border: 1px solid red; /* BORDER TEST*/
+  border: 1px solid red; /* BORDER TEST*/
 
   display: flex;
   align-items: center;
