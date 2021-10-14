@@ -3,53 +3,62 @@ import styled from "styled-components"
 import Picture from "./Picture"
 
 const Container = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
+  border: 2px solid blue; /* BORDER TEST*/
   display: flex;
   justify-content: space-around;
   //align-items: center;
   flex-wrap: wrap;
   font-style: normal;
-  font-weight: 300;
-  font-size: 24px;
-  width: 100%;
-  //min-height: 500px;
 `
 const TextB = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
-
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 26%;
-  font-weight: 300;
-  font-size: 42px;
-  //min-height: 100px;
+  //border: 1px solid red; /* BORDER TEST*/
+  margin: 1% 0;
 `
 const Pic = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
-  width: 45%;
+  //border: 1px solid red; /* BORDER TEST*/
+  width: 100%;
 `
 const TextSm = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
-
+  //border: 1px solid red; /* BORDER TEST*/
+`
+const Tech = styled.div`
+  width: 50%;
+  //border: 1px solid lightcoral; /* BORDER TEST*/
   display: flex;
+  justify-content: center;
   align-items: center;
-  height: 74%;
-  //min-height: 200px;
-  font-weight: 300;
-  font-size: 20px;
+  flex-wrap: wrap;
+  font-style: normal;
+`
+const Icon = styled.img`
+  width: 50px;
+  height: 50px;
+  //border: 1px solid red; /* BORDER TEST*/
+  margin: 0;
+`
+const IconText = styled.div`
+  width: 50%;
+  margin-left: 20px;
+  //border: 1px solid red; /* BORDER TEST*/
 `
 
 export default function Site(prop) {
+  const num = prop.tech
   return (
     <Container>
       <Pic>
         <Picture img={prop.img} />
       </Pic>
-      <Pic>
-        <TextB>{prop.title}</TextB>
-        <TextSm>{prop.children}</TextSm>
-      </Pic>
+
+      <TextB>{prop.title}</TextB>
+      <TextSm>{prop.children}</TextSm>
+      {num.map(p => (
+        <Tech key={p[0]}>
+          <Icon src={p[1]} />
+
+          <IconText>{p[0]}</IconText>
+        </Tech>
+      ))}
     </Container>
   )
 }

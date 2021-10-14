@@ -13,12 +13,14 @@ import reactIcon from "../../images/icons/react-skew.svg"
 import reduxIcon from "../../images/icons/redux-skew.svg"
 import gatsbyIcon from "../../images/icons/gatsby-skew.svg"
 import gitIcon from "../../images/icons/git-skew.svg"
+import { colors, media } from "../../utils"
 gsap.registerPlugin(ScrollTrigger)
 
 const Box = styled.div`
-  //border: 1px solid black; /* BORDER TEST*/
+  border: 1px solid black; /* BORDER TEST*/
   height: 700px;
-  width: 550px;
+  width: 100%;
+  max-width: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,11 +32,15 @@ const Container = styled.div`
   // border: 1px solid red; /* BORDER TEST*/
   padding: 0;
   margin: 0;
+  margin-top: 20px;
   box-sizing: border-box;
   //width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 560px) {
+    display: none;
+  }
 `
 const Ball = styled.div`
   width: 100px;
@@ -52,6 +58,7 @@ const Image = styled.img`
   height: 100px;
   transform: rotate(24deg) skew(-32deg, 6deg);
 `
+
 const Shadow = styled.div`
   width: 100px;
   height: 30px;

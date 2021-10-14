@@ -2,13 +2,12 @@ import React from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
-  //border: 1px solid blue; /* BORDER TEST*/
+  border: 1px solid blue; /* BORDER TEST*/
 
   display: flex;
-  //flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  //flex-wrap: wrap;
+
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
@@ -17,9 +16,8 @@ const Container = styled.div`
   margin-bottom: 50px;
 `
 const TextContainer = styled.div`
-  // border: 1px solid green; /* BORDER TEST*/
-  //border-left: 8px solid black; /* BORDER TEST*/
-  //width: 80%;
+  border: 1px solid green; /* BORDER TEST*/
+
   height: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -29,7 +27,7 @@ const TextContainer = styled.div`
   font-size: 42px;
 `
 const TextB = styled.div`
-  // border: 1px solid red; /* BORDER TEST*/
+  border: 1px solid red; /* BORDER TEST*/
   margin-top: 2%;
   margin-left: 2%;
   display: flex;
@@ -40,7 +38,7 @@ const TextB = styled.div`
   font-size: 54px;
 `
 const TextSm = styled.div`
-  // border: 1px solid red; /* BORDER TEST*/
+  border: 1px solid red; /* BORDER TEST*/
   width: 100%;
   display: flex;
   align-items: center;
@@ -53,6 +51,7 @@ const TextSm = styled.div`
 const Line = styled.div`
   border: 4px solid black; /* BORDER TEST*/
   border-radius: 10px;
+  margin-left: 10px;
   height: 120px;
 `
 
