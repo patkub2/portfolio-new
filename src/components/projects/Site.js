@@ -5,7 +5,7 @@ import Picture from "./Picture"
 const Container = styled.div`
   border: 2px solid blue; /* BORDER TEST*/
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   //align-items: center;
   flex-wrap: wrap;
   font-style: normal;
@@ -23,7 +23,8 @@ const TextSm = styled.div`
 `
 const Tech = styled.div`
   width: 50%;
-  //border: 1px solid lightcoral; /* BORDER TEST*/
+  min-width: 290px;
+  border: 1px solid lightcoral; /* BORDER TEST*/
   display: flex;
   justify-content: center;
   align-items: center;
