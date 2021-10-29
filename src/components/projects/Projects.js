@@ -43,6 +43,7 @@ export default function Projects() {
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],
           ["axios", axiosIcon],
+          ["asdasd", tsIcon],
         ]}
       >
         Pariatur duis sunt fugiat et fugiat ea mollit aliqua incididunt.
