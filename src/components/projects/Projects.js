@@ -13,6 +13,8 @@ import reactIcon from "../../images/icons/react-skew.svg"
 import reduxIcon from "../../images/icons/redux-skew.svg"
 import gatsbyIcon from "../../images/icons/gatsby-skew.svg"
 import gitIcon from "../../images/icons/git-skew.svg"
+import styledComponentsIcon from "../../images/icons/styled-components.svg"
+import axiosIcon from "../../images/icons/axios.svg"
 
 const Container = styled.div`
   border: 1px solid green; /* BORDER TEST*/
@@ -38,8 +40,10 @@ export default function Projects() {
         img={image1}
         title="Booktlify"
         tech={[
-          ["Javascript", jsIcon],
-          ["Git", gitIcon],
+          ["React & Hooks", reactIcon],
+          ["Styled components", styledComponentsIcon],
+          ["axios", axiosIcon],
+          ["asdasd", tsIcon],
         ]}
       >
         Pariatur duis sunt fugiat et fugiat ea mollit aliqua incididunt.
