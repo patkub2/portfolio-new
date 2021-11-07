@@ -22,7 +22,6 @@ const AppsContainer = styled.div`
   flex-wrap: wrap;
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
   width: 100%;
   ${media.desktop`
   min-width: 150px;

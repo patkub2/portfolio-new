@@ -8,5 +8,6 @@ export default {
   h3: "1.2em",
   h4: "1em",
   h5: "0.7em",
+  h55: "0.6em",
   h6: "0.5em",
 }

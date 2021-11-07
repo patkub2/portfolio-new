@@ -10,9 +10,6 @@ const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 24px;
   width: 45%;
   img {
     // border: 1px solid blue; /* BORDER TEST*/
@@ -29,7 +26,7 @@ const TextSm = styled.div`
   align-items: center;
 
   font-weight: 300;
-  font-size: 24px;
+  font-size: ${typography.h6};
 `
 
 export default function Apps(prop) {

@@ -9,8 +9,7 @@ const Container = styled.div`
   align-items: flex-start;
 
   font-style: normal;
-  font-weight: 300;
-  font-size: 24px;
+
   min-height: 100px;
   width: 100%;
   margin-bottom: 50px;
@@ -24,7 +23,6 @@ const TextContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   font-weight: 300;
-  font-size: 42px;
 `
 const TextB = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
@@ -56,14 +54,12 @@ const Line = styled.div`
 
 export default function Title(prop) {
   return (
-    <>
-      <Container>
-        <Line></Line>
-        <TextContainer>
-          <TextB>{prop.title}</TextB>
-          <TextSm>{prop.children}</TextSm>
-        </TextContainer>
-      </Container>
-    </>
+    <Container>
+      <Line></Line>
+      <TextContainer>
+        <TextB>{prop.title}</TextB>
+        <TextSm>{prop.children}</TextSm>
+      </TextContainer>
+    </Container>
   )
 }

@@ -23,7 +23,6 @@ const Container = styled.div`
   flex-wrap: wrap;
   font-style: normal;
   font-weight: 300;
-  font-size: ${typography.h6};
   width: 100%;
 `
 
@@ -34,6 +33,22 @@ export default function Projects() {
         Bellow you can find most of my project. All of them got a live version
         and an open github repo
       </Title>
+      <Site
+        img={image1}
+        title="Booktlify"
+        tech={[
+          ["React & Hooks", reactIcon],
+          ["Styled components", styledComponentsIcon],
+          ["axios", axiosIcon],
+          ["asdasd", tsIcon],
+        ]}
+      >
+        Pariatur duis sunt fugiat et fugiat ea mollit aliqua incididunt.
+        Reprehenderit deserunt amet nisi cillum mollit est dolore incididunt
+        velit eiusmod. Excepteur reprehenderit deserunt ut veniam qui anim
+        ullamco nisi tempor consequat esse laborum voluptate ad. Adipisicing
+        dolor aliqua voluptate commodo enim laboris sunt laboris laboris nostrud
+      </Site>
       <Site
         img={image1}
         title="Booktlify"

@@ -7,25 +7,29 @@ const Container = styled.div`
   border: 2px solid blue; /* BORDER TEST*/
   display: flex;
   justify-content: flex-start;
+  align-items: space-around;
   //align-items: center;
   flex-wrap: wrap;
   font-style: normal;
+  margin-bottom: 100px;
 `
 const TextB = styled.div`
   border: 1px solid red; /* BORDER TEST*/
+  font-size: ${typography.h3};
 `
 const Text = styled.div`
   border: 1px solid red; /* BORDER TEST*/
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
   ${media.tablet`
   width: 50%;
   `}//margin: 1% 0;
 `
 const TextSm = styled.div`
   border: 1px solid red; /* BORDER TEST*/
+  font-size: ${typography.h6};
 `
 const Pic = styled.div`
   border: 1px solid red; /* BORDER TEST*/
@@ -37,16 +41,26 @@ const Pic = styled.div`
 
 const Tech = styled.div`
   width: 100%;
+  height: 60px;
   min-width: 290px;
   border: 1px solid blue; /* BORDER TEST*/
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-size: ${typography.h6};
   font-style: normal;
   ${media.phone`
   width: 40%;
   `}
+`
+const TechContainer = styled.div`
+  width: 100%;
+
+  border: 1px solid blue; /* BORDER TEST*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 `
 const Icon = styled.img`
   width: 50px;
@@ -54,13 +68,13 @@ const Icon = styled.img`
   border: 1px solid red; /* BORDER TEST*/
   margin: 0;
   ${media.tablet`
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   `}
 `
 const IconText = styled.div`
   width: 50%;
-  margin-left: 20px;
+  margin-left: 10px;
   border: 1px solid red; /* BORDER TEST*/
 `
 
@@ -74,14 +88,15 @@ export default function Site(prop) {
       <Text>
         <TextB>{prop.title}</TextB>
         <TextSm>{prop.children}</TextSm>
+        <TechContainer>
+          {num.map(p => (
+            <Tech key={p[0]}>
+              <Icon src={p[1]} />
 
-        {num.map(p => (
-          <Tech key={p[0]}>
-            <Icon src={p[1]} />
-
-            <IconText>{p[0]}</IconText>
-          </Tech>
-        ))}
+              <IconText>{p[0]}</IconText>
+            </Tech>
+          ))}
+        </TechContainer>
       </Text>
     </Container>
   )
