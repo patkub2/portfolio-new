@@ -17,7 +17,7 @@ import styledComponentsIcon from "../../images/icons/styled-components.svg"
 import axiosIcon from "../../images/icons/axios.svg"
 
 const Container = styled.div`
-  border: 1px solid green; /* BORDER TEST*/
+  //border: 1px solid green; /* BORDER TEST*/
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -46,10 +46,10 @@ export default function Projects() {
         Pariatur duis sunt fugiat et fugiat ea mollit aliqua incididunt.
         Reprehenderit deserunt amet nisi cillum mollit est dolore incididunt
         velit eiusmod. Excepteur reprehenderit deserunt ut veniam qui anim
-        ullamco nisi tempor consequat esse laborum voluptate ad. Adipisicing
-        dolor aliqua voluptate commodo enim laboris sunt laboris laboris nostrud
+        ullamco nisi tempor consequat esse
       </Site>
       <Site
+        mirror
         img={image1}
         title="Booktlify"
         tech={[
@@ -61,9 +61,7 @@ export default function Projects() {
       >
         Pariatur duis sunt fugiat et fugiat ea mollit aliqua incididunt.
         Reprehenderit deserunt amet nisi cillum mollit est dolore incididunt
-        velit eiusmod. Excepteur reprehenderit deserunt ut veniam qui anim
-        ullamco nisi tempor consequat esse laborum voluptate ad. Adipisicing
-        dolor aliqua voluptate commodo enim laboris sunt laboris laboris nostrud
+        velit eiusmod. Excepteur reprehenderit
       </Site>
     </Container>
   )

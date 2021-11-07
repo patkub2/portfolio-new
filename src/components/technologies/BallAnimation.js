@@ -17,7 +17,7 @@ import { colors, media, typography } from "../../utils"
 gsap.registerPlugin(ScrollTrigger)
 
 const Box = styled.div`
-  border: 1px solid black; /* BORDER TEST*/
+  //border: 1px solid black; /* BORDER TEST*/
   height: 700px;
   width: 100%;
   max-width: 550px;
@@ -29,7 +29,7 @@ const Box = styled.div`
 `
 
 const Container = styled.div`
-  // border: 1px solid red; /* BORDER TEST*/
+  //border: 1px solid red; /* BORDER TEST*/
   padding: 0;
   margin: 0;
   margin-top: 20px;

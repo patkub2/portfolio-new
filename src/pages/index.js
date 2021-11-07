@@ -40,7 +40,10 @@ const Conf = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Rubik", sans-serif;
+  font-size: 32px;
+  ${media.phone`
   font-size: 42px;
+  `}
 `
 function IndexPage() {
   return (
