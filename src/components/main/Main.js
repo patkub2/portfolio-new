@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { colors, media } from "../../utils"
+import { colors, media, typography } from "../../utils"
 const Container = styled.div`
   margin: 72px 0;
   //border: 1px solid red; /* BORDER TEST*/

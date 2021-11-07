@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import arrow from "../../images/arrow.svg"
+import { colors, media, typography } from "../../utils"
 const Container = styled.div`
   border: 1px solid blue; /* BORDER TEST*/
 

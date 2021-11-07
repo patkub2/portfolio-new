@@ -4,7 +4,8 @@ import "./../styles/global.css"
 import gsap from "gsap"
 
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { colors, media } from "../utils"
+import { colors, media, typography } from "../utils"
+
 import NavBar from "../components/navbar/NavBar"
 import Technologies from "../components/technologies/Technologies"
 import Projects from "../components/projects/Projects"
@@ -30,10 +31,7 @@ const Container = styled.div`
 const Space2 = styled.div`
   min-height: 2000px;
 `
-const Con = styled.div`
-  display: flex;
-  align-items: center;
-`
+
 const Phone = styled.div`
   //width: 360px;
 `
@@ -42,6 +40,7 @@ const Conf = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Rubik", sans-serif;
+  font-size: 42px;
 `
 function IndexPage() {
   return (

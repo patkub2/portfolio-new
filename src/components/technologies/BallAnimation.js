@@ -13,7 +13,7 @@ import reactIcon from "../../images/icons/react-skew.svg"
 import reduxIcon from "../../images/icons/redux-skew.svg"
 import gatsbyIcon from "../../images/icons/gatsby-skew.svg"
 import gitIcon from "../../images/icons/git-skew.svg"
-import { colors, media } from "../../utils"
+import { colors, media, typography } from "../../utils"
 gsap.registerPlugin(ScrollTrigger)
 
 const Box = styled.div`

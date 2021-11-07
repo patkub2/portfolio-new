@@ -1,7 +1,6 @@
 import { slide as Menu } from "react-burger-menu"
 import "./index.css"
 import React from "react"
-
 export default function Burgermenu() {
   return (
     <div>

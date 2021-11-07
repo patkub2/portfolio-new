@@ -3,7 +3,7 @@ import styled from "styled-components"
 import image1 from "../../images/image1.png"
 import Title from "../Title"
 import Site from "./Site"
-import { media, colors } from "../../utils"
+import { media, colors, typography } from "../../utils"
 import htmlIcon from "../../images/icons/html-skew.svg"
 import cssIcon from "../../images/icons/css-skew.svg"
 import sassIcon from "../../images/icons/sass-skew.svg"
@@ -19,13 +19,11 @@ import axiosIcon from "../../images/icons/axios.svg"
 const Container = styled.div`
   border: 1px solid green; /* BORDER TEST*/
   display: flex;
-  //flex-direction: column;
-  //justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
+  font-size: ${typography.h6};
   width: 100%;
 `
 

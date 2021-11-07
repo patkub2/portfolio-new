@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { colors, media } from "../../utils"
+import { colors, media, typography } from "../../utils"
 import Main from "./Main"
 import Mountains from "./Mountains"
 const Container = styled.div`
