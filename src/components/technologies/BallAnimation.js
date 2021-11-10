@@ -13,11 +13,11 @@ import reactIcon from "../../images/icons/react-skew.svg"
 import reduxIcon from "../../images/icons/redux-skew.svg"
 import gatsbyIcon from "../../images/icons/gatsby-skew.svg"
 import gitIcon from "../../images/icons/git-skew.svg"
-import { colors, media } from "../../utils"
+import { colors, media, typography } from "../../utils"
 gsap.registerPlugin(ScrollTrigger)
 
 const Box = styled.div`
-  border: 1px solid black; /* BORDER TEST*/
+  //border: 1px solid black; /* BORDER TEST*/
   height: 700px;
   width: 100%;
   max-width: 550px;
@@ -29,7 +29,7 @@ const Box = styled.div`
 `
 
 const Container = styled.div`
-  // border: 1px solid red; /* BORDER TEST*/
+  //border: 1px solid red; /* BORDER TEST*/
   padding: 0;
   margin: 0;
   margin-top: 20px;
@@ -86,7 +86,6 @@ function BallAnimation() {
     const shadowBall = elements.querySelector("#ballshadow")
     console.log(shadowBall)
     const phone = elements.querySelector("#phone")
-    const phoneScreen = elements.querySelector("#phoneScreen")
     const shadow = elements.querySelector("#shadow")
     const tl = gsap.timeline({ repeat: -1, yoyo: true })
     const t2 = gsap.timeline({ repeat: -1, delay: 0.55 })

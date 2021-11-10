@@ -4,7 +4,8 @@ import "./../styles/global.css"
 import gsap from "gsap"
 
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { colors, media } from "../utils"
+import { colors, media, typography } from "../utils"
+
 import NavBar from "../components/navbar/NavBar"
 import Technologies from "../components/technologies/Technologies"
 import Projects from "../components/projects/Projects"
@@ -14,7 +15,7 @@ import Hello from "../components/main/Hello"
 gsap.registerPlugin(ScrollTrigger)
 
 const Container = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
+  //border: 1px solid red; /* BORDER TEST*/
   padding: 0;
   margin: 0;
   max-width: 1700px;
@@ -30,10 +31,7 @@ const Container = styled.div`
 const Space2 = styled.div`
   min-height: 2000px;
 `
-const Con = styled.div`
-  display: flex;
-  align-items: center;
-`
+
 const Phone = styled.div`
   //width: 360px;
 `
@@ -42,6 +40,10 @@ const Conf = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Rubik", sans-serif;
+  font-size: 32px;
+  ${media.phone`
+  font-size: 45px;
+  `}
 `
 function IndexPage() {
   return (

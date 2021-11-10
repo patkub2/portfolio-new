@@ -1,65 +1,204 @@
 import React from "react"
 import styled from "styled-components"
 import Picture from "./Picture"
-
+import { colors, media, typography } from "../../utils"
+import github from "../../images/github64.png"
 const Container = styled.div`
-  border: 2px solid blue; /* BORDER TEST*/
+  //border: 2px solid blue; /* BORDER TEST*/
   display: flex;
-  justify-content: flex-start;
-  //align-items: center;
+  justify-content: space-evenly;
+  align-items: flex-start;
   flex-wrap: wrap;
   font-style: normal;
+  width: 100%;
+  margin-bottom: 100px;
+  ${media.tablet`
+  width: 95%;
+  `} //margin: 1% 0;
+  ${media.desktop`
+  width: 100%;
+  `} //margin: 1% 0;
 `
 const TextB = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
-  margin: 1% 0;
+  margin: 15px 0px;
+  font-size: ${typography.h3};
+`
+const Text = styled.div`
+  //border: 1px solid red; /* BORDER TEST*/
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  ${media.desktop`
+  width: 40%;
+  `}//margin: 1% 0;
+`
+const TextSm = styled.div`
+  //border: 1px solid red; /* BORDER TEST*/
+  font-size: ${typography.h6};
+  margin-bottom: 15px;
+  font-weight: 400;
 `
 const Pic = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
   width: 100%;
-`
-const TextSm = styled.div`
-  //border: 1px solid red; /* BORDER TEST*/
-`
-const Tech = styled.div`
+  ${media.desktop`
   width: 50%;
-  min-width: 290px;
-  border: 1px solid lightcoral; /* BORDER TEST*/
+  `}
+`
+
+const Tech = styled.div`
+  width: 100%;
+  height: 60px;
+  //min-width: 290px;
+  //border: 1px solid blue; /* BORDER TEST*/
   display: flex;
+  //justify-content: center;
+  align-items: center;
+  font-size: ${typography.h6};
+  font-style: normal;
+  ${media.phone`
+  width: 40%;
+  font-size: ${typography.h6};
+  `}
+  ${media.tablet`
+  width: 50%;
+  //font-weight: 400;
+  font-size: ${typography.h6};
+  `}
+`
+const TechContainer = styled.div`
+  width: 100%;
+
+  //border: 1px solid blue; /* BORDER TEST*/
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  font-style: normal;
 `
 const Icon = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   //border: 1px solid red; /* BORDER TEST*/
   margin: 0;
+  ${media.tablet`
+  width: 30px;
+  height: 30px;
+  `}
 `
 const IconText = styled.div`
   width: 50%;
-  margin-left: 20px;
+  margin-left: 10px;
   //border: 1px solid red; /* BORDER TEST*/
+`
+
+const ButtonContainer = styled.div`
+  //border: 1px solid blue; /* BORDER TEST*/
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+`
+const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: ${typography.h6};
+  margin-top: 2%;
+  font-weight: 400;
+  letter-spacing: 1px;
+  //padding: 13px 50px 13px;
+  width: 150px;
+  height: 55px;
+  outline: 0;
+  border: 3px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+  ::after {
+    content: "";
+    background-color: black;
+    border-radius: 7px;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    right: 7px;
+    transition: 0.3s;
+  }
+  :hover::after {
+    top: -7px;
+    right: -7px;
+  }
+  ${media.desktop`
+  margin-top: 2%;
+  `}
+`
+const Img = styled.img`
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  margin: 0;
 `
 
 export default function Site(prop) {
   const num = prop.tech
-  return (
-    <Container>
-      <Pic>
-        <Picture img={prop.img} />
-      </Pic>
+  if (prop.mirror) {
+    return (
+      <Container>
+        <Text>
+          <TextB>{prop.title}</TextB>
+          <TextSm>{prop.children}</TextSm>
+          <TechContainer>
+            {num.map(p => (
+              <Tech key={p[0]}>
+                <Icon src={p[1]} />
 
-      <TextB>{prop.title}</TextB>
-      <TextSm>{prop.children}</TextSm>
-      {num.map(p => (
-        <Tech key={p[0]}>
-          <Icon src={p[1]} />
+                <IconText>{p[0]}</IconText>
+              </Tech>
+            ))}
+          </TechContainer>
+          <ButtonContainer>
+            <Button>Live</Button>
+            <Button>
+              <Img src={github}></Img>
+            </Button>
+          </ButtonContainer>
+        </Text>{" "}
+        <Pic>
+          <Picture img={prop.img} />
+        </Pic>
+      </Container>
+    )
+  } else
+    return (
+      <Container>
+        <Pic>
+          <Picture img={prop.img} />
+        </Pic>
+        <Text>
+          <TextB>{prop.title}</TextB>
+          <TextSm>{prop.children}</TextSm>
+          <TechContainer>
+            {num.map(p => (
+              <Tech key={p[0]}>
+                <Icon src={p[1]} />
 
-          <IconText>{p[0]}</IconText>
-        </Tech>
-      ))}
-    </Container>
-  )
+                <IconText>{p[0]}</IconText>
+              </Tech>
+            ))}
+          </TechContainer>
+          <ButtonContainer>
+            <Button>Live</Button>
+            <Button>
+              <Img src={github}></Img>
+            </Button>
+          </ButtonContainer>
+        </Text>
+      </Container>
+    )
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { colors, media } from "../../utils"
+import { colors, media, typography } from "../../utils"
 const Container = styled.div`
   margin: 72px 0;
   //border: 1px solid red; /* BORDER TEST*/
@@ -11,9 +11,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 24px;
   ${media.desktop`
   margin-right: 5vw;
     align-items: flex-end;
@@ -27,13 +24,11 @@ const Title = styled.div`
   justify-content: center;
   align-items: center;
   font-weight: 300;
-  font-size: 42px;
+  font-size: ${typography.h2};
   margin-bottom: 20px;
   ${media.tablet`
-  font-size: 54px;
   `}
   ${media.desktop`
-  font-size: 64px;
     justify-content: flex-end; 
     margin-bottom: 30px;
   `}
@@ -45,19 +40,16 @@ const TitleSm = styled.div`
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  font-size: 20px;
+  font-size: ${typography.h5};
   margin-bottom: 40px;
-  ${media.tablet`
-  font-size: 23px;
-  `}
+
   ${media.desktop`
     justify-content: flex-end;
-    font-size: 26px;
   `}
 `
 
 const Button = styled.button`
-  font-size: 20px;
+  font-size: ${typography.h6};
   font-weight: 500;
   letter-spacing: 1px;
   padding: 13px 50px 13px;

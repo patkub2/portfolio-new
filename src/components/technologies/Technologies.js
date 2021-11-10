@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import Apps from "./Apps"
 import Title from "../Title"
-import { colors, media } from "../../utils"
 import BallAnimation from "./BallAnimation"
+import { colors, media, typography } from "../../utils"
 const Container = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
   display: flex;
@@ -22,7 +22,6 @@ const AppsContainer = styled.div`
   flex-wrap: wrap;
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
   width: 100%;
   ${media.desktop`
   min-width: 150px;

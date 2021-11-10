@@ -9,7 +9,7 @@ import birds from "../../images/birds.png"
 import mountains from "../../images/mountains.png"
 import lake from "../../images/lake.png"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { colors, media } from "../../utils"
+import { colors, media, typography } from "../../utils"
 
 gsap.registerPlugin(ScrollTrigger)
 

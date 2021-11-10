@@ -11,7 +11,6 @@ const Container = styled.div`
   flex-wrap: wrap;
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
   width: 45%;
   img {
     // border: 1px solid blue; /* BORDER TEST*/
@@ -28,7 +27,6 @@ const TextSm = styled.div`
   align-items: center;
 
   font-weight: 300;
-  font-size: 24px;
 `
 
 export default function Apps(prop) {

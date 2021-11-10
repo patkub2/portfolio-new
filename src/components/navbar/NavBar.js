@@ -4,7 +4,7 @@ import "./index.css"
 import React from "react"
 import Burgermenu from "./Burgermenu"
 import styled from "styled-components"
-
+import { typography } from "../../utils"
 const Container = styled.div`
   position: fixed;
   //border: 1px solid yellow; /* BORDER TEST*/
@@ -17,7 +17,7 @@ const Container = styled.div`
   color: black;
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
+  font-size: ${typography.h5};
   line-height: 17px;
   z-index: 90;
 `

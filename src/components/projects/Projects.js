@@ -3,7 +3,7 @@ import styled from "styled-components"
 import image1 from "../../images/image1.png"
 import Title from "../Title"
 import Site from "./Site"
-import { media, colors } from "../../utils"
+import { media, colors, typography } from "../../utils"
 import htmlIcon from "../../images/icons/html-skew.svg"
 import cssIcon from "../../images/icons/css-skew.svg"
 import sassIcon from "../../images/icons/sass-skew.svg"
@@ -17,15 +17,13 @@ import styledComponentsIcon from "../../images/icons/styled-components.svg"
 import axiosIcon from "../../images/icons/axios.svg"
 
 const Container = styled.div`
-  border: 1px solid green; /* BORDER TEST*/
+  //border: 1px solid green; /* BORDER TEST*/
   display: flex;
-  //flex-direction: column;
-  //justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
   width: 100%;
 `
 
@@ -49,8 +47,22 @@ export default function Projects() {
         Pariatur duis sunt fugiat et fugiat ea mollit aliqua incididunt.
         Reprehenderit deserunt amet nisi cillum mollit est dolore incididunt
         velit eiusmod. Excepteur reprehenderit deserunt ut veniam qui anim
-        ullamco nisi tempor consequat esse laborum voluptate ad. Adipisicing
-        dolor aliqua voluptate commodo enim laboris sunt laboris laboris nostrud
+        ullamco nisi tempor consequat esse
+      </Site>
+      <Site
+        mirror
+        img={image1}
+        title="Booktlify"
+        tech={[
+          ["React & Hooks", reactIcon],
+          ["Styled components", styledComponentsIcon],
+          ["axios", axiosIcon],
+          ["asdasd", tsIcon],
+        ]}
+      >
+        Pariatur duis sunt fugiat et fugiat ea mollit aliqua incididunt.
+        Reprehenderit deserunt amet nisi cillum mollit est dolore incididunt
+        velit eiusmod. Excepteur reprehenderit
       </Site>
     </Container>
   )
