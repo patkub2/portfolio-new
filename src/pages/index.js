@@ -15,7 +15,7 @@ import Hello from "../components/main/Hello"
 gsap.registerPlugin(ScrollTrigger)
 
 const Container = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
+  //border: 1px solid red; /* BORDER TEST*/
   padding: 0;
   margin: 0;
   max-width: 1700px;
@@ -42,7 +42,7 @@ const Conf = styled.div`
   font-family: "Rubik", sans-serif;
   font-size: 32px;
   ${media.phone`
-  font-size: 42px;
+  font-size: 45px;
   `}
 `
 function IndexPage() {

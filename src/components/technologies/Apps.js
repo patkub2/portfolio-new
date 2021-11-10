@@ -24,8 +24,7 @@ const TextSm = styled.div`
 
   display: flex;
   align-items: center;
-
-  font-weight: 300;
+  font-weight: 400;
   font-size: ${typography.h6};
 `
 

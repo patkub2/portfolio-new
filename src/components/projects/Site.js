@@ -2,16 +2,22 @@ import React from "react"
 import styled from "styled-components"
 import Picture from "./Picture"
 import { colors, media, typography } from "../../utils"
-
+import github from "../../images/github64.png"
 const Container = styled.div`
   //border: 2px solid blue; /* BORDER TEST*/
   display: flex;
   justify-content: space-evenly;
-  align-items: space-around;
-  //align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   font-style: normal;
+  width: 100%;
   margin-bottom: 100px;
+  ${media.tablet`
+  width: 95%;
+  `} //margin: 1% 0;
+  ${media.desktop`
+  width: 100%;
+  `} //margin: 1% 0;
 `
 const TextB = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
@@ -87,6 +93,58 @@ const IconText = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
 `
 
+const ButtonContainer = styled.div`
+  //border: 1px solid blue; /* BORDER TEST*/
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+`
+const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: ${typography.h6};
+  margin-top: 2%;
+  font-weight: 400;
+  letter-spacing: 1px;
+  //padding: 13px 50px 13px;
+  width: 150px;
+  height: 55px;
+  outline: 0;
+  border: 3px solid black;
+  border-radius: 7px;
+  cursor: pointer;
+  position: relative;
+  background-color: white;
+  ::after {
+    content: "";
+    background-color: black;
+    border-radius: 7px;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    right: 7px;
+    transition: 0.3s;
+  }
+  :hover::after {
+    top: -7px;
+    right: -7px;
+  }
+  ${media.desktop`
+  margin-top: 2%;
+  `}
+`
+const Img = styled.img`
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+`
+
 export default function Site(prop) {
   const num = prop.tech
   if (prop.mirror) {
@@ -104,6 +162,12 @@ export default function Site(prop) {
               </Tech>
             ))}
           </TechContainer>
+          <ButtonContainer>
+            <Button>Live</Button>
+            <Button>
+              <Img src={github}></Img>
+            </Button>
+          </ButtonContainer>
         </Text>{" "}
         <Pic>
           <Picture img={prop.img} />
@@ -128,6 +192,12 @@ export default function Site(prop) {
               </Tech>
             ))}
           </TechContainer>
+          <ButtonContainer>
+            <Button>Live</Button>
+            <Button>
+              <Img src={github}></Img>
+            </Button>
+          </ButtonContainer>
         </Text>
       </Container>
     )

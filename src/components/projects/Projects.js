@@ -20,6 +20,7 @@ const Container = styled.div`
   //border: 1px solid green; /* BORDER TEST*/
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   font-style: normal;
   font-weight: 300;

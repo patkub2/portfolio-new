@@ -86,7 +86,6 @@ function BallAnimation() {
     const shadowBall = elements.querySelector("#ballshadow")
     console.log(shadowBall)
     const phone = elements.querySelector("#phone")
-    const phoneScreen = elements.querySelector("#phoneScreen")
     const shadow = elements.querySelector("#shadow")
     const tl = gsap.timeline({ repeat: -1, yoyo: true })
     const t2 = gsap.timeline({ repeat: -1, delay: 0.55 })
