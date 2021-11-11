@@ -1,13 +1,13 @@
-import { slide as Menu } from "react-burger-menu"
 import logo from "../../images/Logo.svg"
 import "./index.css"
 import React from "react"
 import Burgermenu from "./Burgermenu"
 import styled from "styled-components"
-import { typography } from "../../utils"
+
+import { colors, media, typography } from "../../utils"
 const Container = styled.div`
   position: fixed;
-  //border: 1px solid yellow; /* BORDER TEST*/
+  border: 1px solid yellow; /* BORDER TEST*/
   padding: 0;
   margin: 0;
   height: 75px;
@@ -28,6 +28,12 @@ const Img = styled.div`
     height: 100%;
   }
 `
+const BurgermenuContainer = styled.div`
+  display: inline;
+  ${media.desktop`
+display: none;
+  `}
+`
 export default function NavBar() {
   return (
     <>
@@ -37,8 +43,9 @@ export default function NavBar() {
         </Img>
         Patryk Kubala
       </Container>
-
-      <Burgermenu />
+      <BurgermenuContainer>
+        <Burgermenu />
+      </BurgermenuContainer>
     </>
   )
 }

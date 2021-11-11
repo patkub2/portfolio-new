@@ -1,6 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import image1 from "../../images/image1.png"
+import image2 from "../../images/image2.png"
+import image3 from "../../images/image3.png"
+import image4 from "../../images/image4.png"
 import Title from "../Title"
 import Site from "./Site"
 import { media, colors, typography } from "../../utils"
@@ -13,8 +16,15 @@ import reactIcon from "../../images/icons/react-skew.svg"
 import reduxIcon from "../../images/icons/redux-skew.svg"
 import gatsbyIcon from "../../images/icons/gatsby-skew.svg"
 import gitIcon from "../../images/icons/git-skew.svg"
+import gsapIcon from "../../images/icons/gsap.svg"
 import styledComponentsIcon from "../../images/icons/styled-components.svg"
 import axiosIcon from "../../images/icons/axios.svg"
+import rwdIcon from "../../images/rwd.png"
+import apiIcon from "../../images/api.png"
+import mongodbIcon from "../../images/mongodb.png"
+import nodejsIcon from "../../images/nodejs.png"
+import expressIcon from "../../images/express.png"
+import localstorageIcon from "../../images/localstorage.png"
 
 const Container = styled.div`
   //border: 1px solid green; /* BORDER TEST*/
@@ -35,34 +45,91 @@ export default function Projects() {
         and an open github repo
       </Title>
       <Site
-        img={image1}
-        title="Booktlify"
+        img={image4}
+        title="Portfolio"
         tech={[
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],
-          ["axios", axiosIcon],
-          ["asdasd", tsIcon],
+          ["Redux", reduxIcon],
+          ["GSAP", gsapIcon],
         ]}
       >
-        Pariatur duis sunt fugiat et fugiat ea mollit aliqua incididunt.
-        Reprehenderit deserunt amet nisi cillum mollit est dolore incididunt
-        velit eiusmod. Excepteur reprehenderit deserunt ut veniam qui anim
-        ullamco nisi tempor consequat esse
+        Portfolio page made in react. Redux has been used to change the language
+        of the page without having to refresh it. For styling I used
+        styled-components. Animations were made in GSAP.
       </Site>
       <Site
         mirror
+        img={image2}
+        title="CoffeeHome"
+        tech={[
+          ["React & Hooks", reactIcon],
+          ["Styled components", styledComponentsIcon],
+          ["MongoDB", mongodbIcon],
+          ["TypeScript", tsIcon],
+          ["NodeJS", nodejsIcon],
+          ["Express", expressIcon],
+        ]}
+      >
+        A small ReactJS-based web application and local storage that includes
+        some basic functions such as editing and deleting. The purpose of the
+        app is to help people record and analyze the cost of their lives.
+      </Site>
+      <Site
+        img={image4}
+        title="Portfolio (old)"
+        tech={[
+          ["React & Hooks", reactIcon],
+          ["Styled components", styledComponentsIcon],
+          ["Redux", reduxIcon],
+          ["GSAP", gsapIcon],
+        ]}
+      >
+        Portfolio page made in react. Redux has been used to change the language
+        of the page without having to refresh it. For styling I used
+        styled-components. Animations were made in GSAP.
+      </Site>
+      <Site
+        mirror
+        img={image2}
+        title="Life-cost App"
+        tech={[
+          ["React & Hooks", reactIcon],
+          ["Styled components", styledComponentsIcon],
+          ["Sass", sassIcon],
+          ["localstorage", localstorageIcon],
+        ]}
+      >
+        A small ReactJS-based web application and local storage that includes
+        some basic functions such as editing and deleting. The purpose of the
+        app is to help people record and analyze the cost of their lives.
+      </Site>
+      <Site
         img={image1}
         title="Booktlify"
         tech={[
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],
           ["axios", axiosIcon],
-          ["asdasd", tsIcon],
+          ["API", apiIcon],
         ]}
       >
-        Pariatur duis sunt fugiat et fugiat ea mollit aliqua incididunt.
-        Reprehenderit deserunt amet nisi cillum mollit est dolore incididunt
-        velit eiusmod. Excepteur reprehenderit
+        A simple application that allows you to search for books and open them
+        with the help of google books. The application was created in React and
+        uses the google books API. I used styled for styling components with
+        flexbox.
+      </Site>
+      <Site
+        mirror
+        img={image3}
+        title="Fast Typing Game"
+        tech={[
+          ["React & Hooks", reactIcon],
+          ["Styled components", styledComponentsIcon],
+        ]}
+      >
+        The first major project using React Hooks tools. A game that is designed
+        to measure your writing time and show some motivating random quotes.
       </Site>
     </Container>
   )

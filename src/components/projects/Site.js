@@ -21,7 +21,7 @@ const Container = styled.div`
 `
 const TextB = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
-  margin: 15px 0px;
+  margin: 20px 0px;
   font-size: ${typography.h3};
 `
 const Text = styled.div`
@@ -41,10 +41,12 @@ const TextSm = styled.div`
   font-weight: 400;
 `
 const Pic = styled.div`
-  //border: 1px solid red; /* BORDER TEST*/
+  border: 1px solid red; /* BORDER TEST*/
+  margin: 20px;
   width: 100%;
   ${media.desktop`
   width: 50%;
+  margin: 0;
   `}
 `
 
@@ -58,19 +60,21 @@ const Tech = styled.div`
   align-items: center;
   font-size: ${typography.h6};
   font-style: normal;
+
   ${media.phone`
   width: 40%;
   font-size: ${typography.h6};
   `}
   ${media.tablet`
   width: 50%;
+  
   //font-weight: 400;
   font-size: ${typography.h6};
   `}
 `
 const TechContainer = styled.div`
   width: 100%;
-
+  min-height: 130px;
   //border: 1px solid blue; /* BORDER TEST*/
   display: flex;
   flex-wrap: wrap;
