@@ -105,8 +105,10 @@ const ButtonContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
 `
-const Button = styled.button`
+const Button = styled.a`
   display: flex;
+  text-decoration: none; /* no underline */
+  color: black;
   justify-content: center;
   align-items: center;
   font-size: ${typography.h6};
@@ -167,8 +169,10 @@ export default function Site(prop) {
             ))}
           </TechContainer>
           <ButtonContainer>
-            <Button>Live</Button>
-            <Button>
+            <Button href={prop.live} target="_blank">
+              Live
+            </Button>
+            <Button href={prop.github} target="_blank">
               <Img src={github}></Img>
             </Button>
           </ButtonContainer>
@@ -197,8 +201,10 @@ export default function Site(prop) {
             ))}
           </TechContainer>
           <ButtonContainer>
-            <Button>Live</Button>
-            <Button>
+            <Button href={prop.live} target="_blank">
+              Live
+            </Button>
+            <Button href={prop.github} target="_blank">
               <Img src={github}></Img>
             </Button>
           </ButtonContainer>

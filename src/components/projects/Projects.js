@@ -47,6 +47,8 @@ export default function Projects() {
       <Site
         img={image4}
         title="Portfolio"
+        github="https://github.com/patkub2/portfolio-new"
+        live="https://github.com/patkub2/portfolio-new"
         tech={[
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],
@@ -62,6 +64,8 @@ export default function Projects() {
         mirror
         img={image2}
         title="CoffeeHome"
+        github="https://github.com/patkub2/coffee-home"
+        live="https://github.com/patkub2/coffee-home"
         tech={[
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],
@@ -78,6 +82,8 @@ export default function Projects() {
       <Site
         img={image4}
         title="Portfolio (old)"
+        github="https://github.com/patkub2/portfolio"
+        live="https://patkub.netlify.app"
         tech={[
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],
@@ -93,6 +99,8 @@ export default function Projects() {
         mirror
         img={image2}
         title="Life-cost App"
+        github="https://github.com/patkub2/life-cost-app"
+        live="https://patkub2-life-cost-app.netlify.app"
         tech={[
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],
@@ -107,6 +115,8 @@ export default function Projects() {
       <Site
         img={image1}
         title="Booktlify"
+        github="https://github.com/patkub2/booktifly"
+        live="https://patkub2-booktlify.netlify.app"
         tech={[
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],
@@ -123,6 +133,8 @@ export default function Projects() {
         mirror
         img={image3}
         title="Fast Typing Game"
+        github="https://patkub2-fast-typing-game.netlify.app"
+        live="https://github.com/patkub2/fast-typing-game"
         tech={[
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],
