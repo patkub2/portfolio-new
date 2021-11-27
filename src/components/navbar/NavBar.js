@@ -6,13 +6,14 @@ import styled from "styled-components"
 
 import { colors, media, typography } from "../../utils"
 const Container = styled.div`
+  width: 100%;
   position: fixed;
-  border: 1px solid yellow; /* BORDER TEST*/
+  border: 1px solid red; /* BORDER TEST*/
   padding: 0;
   margin: 0;
   height: 75px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   color: black;
   font-style: normal;
@@ -28,18 +29,29 @@ const Name = styled.div`
   justify-content: flex-start;
   align-items: center;
 `
-const Img = styled.div`
-  height: 60%;
+const Img = styled.img`
+  border: 1px solid red; /* BORDER TEST*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   margin: 0 10px;
-  img {
-    height: 100%;
-  }
 `
-const Link = styled.div`
+const Link = styled.a`
   border: 1px solid yellow; /* BORDER TEST*/
+  font-size: ${typography.h5};
+  font-weight: 400;
+  margin: 0 20px;
 `
 const Menu = styled.div`
   border: 1px solid yellow; /* BORDER TEST*/
+  display: none;
+
+  justify-content: flex-start;
+  align-items: center;
+  ${media.desktop`
+display: flex;
+  `}
 `
 const BurgermenuContainer = styled.div`
   display: inline;
@@ -52,13 +64,12 @@ export default function NavBar() {
     <>
       <Container>
         <Name>
-          <Img>
-            <img src={logo}></img>
-          </Img>
+          <Img src={logo}></Img>
           Patryk Kubala
         </Name>
 
         <Menu>
+          <Link>Home</Link>
           <Link>Technologies</Link>
           <Link>Projects</Link>
           <Link>Contact</Link>
