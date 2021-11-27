@@ -82,7 +82,7 @@ export default function Main() {
     <Container>
       <Title>Patryk Kubala</Title>
       <TitleSm>Front-end developer</TitleSm>
-      <Button>Simple</Button>{" "}
+      <Button>See more</Button>{" "}
     </Container>
   )
 }

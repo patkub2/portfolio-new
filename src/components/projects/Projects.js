@@ -54,6 +54,7 @@ export default function Projects() {
           ["Styled components", styledComponentsIcon],
           ["Redux", reduxIcon],
           ["GSAP", gsapIcon],
+          ["Gatsby", gatsbyIcon],
         ]}
       >
         Portfolio page made in react. Redux has been used to change the language
@@ -133,8 +134,8 @@ export default function Projects() {
         mirror
         img={image3}
         title="Fast Typing Game"
-        github="https://patkub2-fast-typing-game.netlify.app"
-        live="https://github.com/patkub2/fast-typing-game"
+        live="https://patkub2-fast-typing-game.netlify.app"
+        github="https://github.com/patkub2/fast-typing-game"
         tech={[
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],

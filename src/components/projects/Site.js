@@ -17,6 +17,7 @@ const Container = styled.div`
   `} //margin: 1% 0;
   ${media.desktop`
   width: 100%;
+  padding-top: 60px;
   `} //margin: 1% 0;
 `
 const TextB = styled.div`
@@ -41,7 +42,8 @@ const TextSm = styled.div`
   font-weight: 400;
 `
 const Pic = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
+  //background-color: black;
+  //border: 1px solid red; /* BORDER TEST*/
   margin: 20px;
   width: 100%;
   ${media.desktop`
@@ -78,7 +80,7 @@ const TechContainer = styled.div`
   //border: 1px solid blue; /* BORDER TEST*/
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `
 const Icon = styled.img`

@@ -1,14 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 const Container = styled.div`
-  border: 1px solid blue; /* BORDER TEST*/
+  //border: 1px solid blue; /* BORDER TEST*/
 
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   outline: 0;
-  border: 3px solid black;
+  //border: 3px solid black;
   border-radius: 10px;
   cursor: pointer;
   position: relative;
@@ -30,7 +30,9 @@ const Container = styled.div`
 `
 
 const Img = styled.img`
+  background-color: black;
   border: 3px solid black; /* BORDER TEST*/
+  width: 100%;
   margin: 0;
   padding: 0;
   border-radius: 7px;
