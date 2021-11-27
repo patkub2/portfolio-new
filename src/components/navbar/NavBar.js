@@ -21,12 +21,25 @@ const Container = styled.div`
   line-height: 17px;
   z-index: 90;
 `
+const Name = styled.div`
+  border: 1px solid yellow; /* BORDER TEST*/
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`
 const Img = styled.div`
   height: 60%;
   margin: 0 10px;
   img {
     height: 100%;
   }
+`
+const Link = styled.div`
+  border: 1px solid yellow; /* BORDER TEST*/
+`
+const Menu = styled.div`
+  border: 1px solid yellow; /* BORDER TEST*/
 `
 const BurgermenuContainer = styled.div`
   display: inline;
@@ -38,11 +51,20 @@ export default function NavBar() {
   return (
     <>
       <Container>
-        <Img>
-          <img src={logo}></img>
-        </Img>
-        Patryk Kubala
+        <Name>
+          <Img>
+            <img src={logo}></img>
+          </Img>
+          Patryk Kubala
+        </Name>
+
+        <Menu>
+          <Link>Technologies</Link>
+          <Link>Projects</Link>
+          <Link>Contact</Link>
+        </Menu>
       </Container>
+
       <BurgermenuContainer>
         <Burgermenu />
       </BurgermenuContainer>
