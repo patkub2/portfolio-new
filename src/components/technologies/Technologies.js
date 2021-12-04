@@ -33,11 +33,11 @@ const AppsContainer = styled.div`
 export default function Technologies() {
   return (
     <Container>
+      <Title title="Technologies">
+        These are the technologies I work with currently or used in my past
+        projects.
+      </Title>
       <AppsContainer>
-        <Title title="Technologies">
-          These are the technologies I work with currently or used in my past
-          projects.
-        </Title>
         <Apps>HTML</Apps>
         <Apps>Css</Apps>
         <Apps>Sass</Apps>

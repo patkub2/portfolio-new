@@ -11,6 +11,7 @@ import Technologies from "../components/technologies/Technologies"
 import Projects from "../components/projects/Projects"
 import Space from "../components/Space"
 import Hello from "../components/main/Hello"
+import Contact from "../components/contact/Contact"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -26,6 +27,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding: 1%;
+  ${media.phone`
+  padding: 0;
+  `}
 `
 
 const Space2 = styled.div`
@@ -59,6 +64,7 @@ function IndexPage() {
           <Technologies />
           <Space />
           <Projects />
+          <Contact />
         </Container>
         <Space2 />
       </Phone>

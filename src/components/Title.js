@@ -1,18 +1,22 @@
 import React from "react"
 import styled from "styled-components"
-import { typography } from "../utils"
+import { typography, media } from "../utils"
 const Container = styled.div`
-  //border: 1px solid blue; /* BORDER TEST*/
+  border: 1px solid blue; /* BORDER TEST*/
 
   display: flex;
-  justify-content: center;
+  //justify-content: center;
   align-items: flex-start;
 
   font-style: normal;
-
+  padding: 0;
   min-height: 100px;
   width: 100%;
   margin-bottom: 50px;
+  ${media.desktop`
+  
+  padding-left: 60px;
+  `}
 `
 const TextContainer = styled.div`
   //border: 1px solid green; /* BORDER TEST*/
@@ -35,15 +39,18 @@ const TextB = styled.div`
   font-size: ${typography.h2};
 `
 const TextSm = styled.div`
-  //border: 1px solid red; /* BORDER TEST*/
+  border: 1px solid red; /* BORDER TEST*/
   width: 100%;
   display: flex;
   align-items: center;
-  margin-top: 4%;
+  margin-top: 2%;
   margin-left: 2%;
   font-weight: 300;
 
   font-size: ${typography.h6};
+  ${media.desktop`
+  width: 50%;
+  `}
 `
 const Line = styled.div`
   border: 4px solid black; /* BORDER TEST*/

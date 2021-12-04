@@ -53,15 +53,15 @@ const Pic = styled.div`
 `
 
 const Tech = styled.div`
-  width: 100%;
+  width: 45%;
   height: 60px;
   //min-width: 290px;
-  //border: 1px solid blue; /* BORDER TEST*/
+  //border: 1px solid red; /* BORDER TEST*/
   display: flex;
-  //justify-content: center;
   align-items: center;
   font-size: ${typography.h6};
   font-style: normal;
+  min-width: 190px;
 
   ${media.phone`
   width: 40%;
@@ -80,7 +80,7 @@ const TechContainer = styled.div`
   //border: 1px solid blue; /* BORDER TEST*/
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 `
 const Icon = styled.img`
