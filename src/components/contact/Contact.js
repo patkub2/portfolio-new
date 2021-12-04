@@ -32,12 +32,14 @@ const Form = styled.div`
 `
 
 const Input = styled.input`
-  width: 90%;
+  width: 500px;
   border: 3px solid #000000;
   box-sizing: border-box;
   border-radius: 10px;
 `
-const Label = styled.label``
+const Label = styled.div`
+  width: 90%;
+`
 
 export default function Contact(prop) {
   return (
