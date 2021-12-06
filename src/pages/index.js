@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger)
 const Container = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
   padding: 0;
-  margin: 0;
+  margin: 10px;
   max-width: 1700px;
   //background-color: #130d0a;
   font-family: "Rubik", sans-serif;
