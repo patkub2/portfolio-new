@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import emailjs from "emailjs-com"
 import { colors, media, typography } from "../../utils"
@@ -25,16 +25,20 @@ const Label = styled.div`
   width: 90%;
 `
 export default function Email() {
+  const [data, setData] = useState()
+  useEffect(async () => {
+    const result = await fetch(`${process.env.GATSBY_API_URL}/users`).then(
+      res => res.json()
+    )
+    setData(result.data)
+  })
+  console.log(data)
+
   function sendEmail(e) {
     e.preventDefault()
 
     emailjs
-      .sendForm(
-        "default_service",
-        "template_7kuen38",
-        e.target,
-        process.env.REACT_APP_API_KEY
-      )
+      .sendForm("default_service", "template_7kuen38", e.target, data)
       .then(
         result => {
           console.log(result.text)
