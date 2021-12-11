@@ -62,17 +62,9 @@ export default function Contact(prop) {
           All informations and links can be found below. Feel free to contact me
         </Title>
         <Form>
-          <Label>Name</Label>
-          <Input type="text" id="name" />
-          <Label>Email</Label>
-          <Input type="text" id="email" />
-          <Label>Message</Label>
-          <Message type="text" id="message" />
-          <Submit type="submit" value="Submit" id="subbmit" />
-        </Form>
-        <Icons>
           <Email />
-        </Icons>
+        </Form>
+        <Icons></Icons>
       </Container>
     </>
   )
