@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
 import emailjs from "emailjs-com"
 import { colors, media, typography } from "../../utils"
@@ -25,20 +25,19 @@ const Label = styled.div`
   width: 90%;
 `
 export default function Email() {
-  const [data, setData] = useState()
-  useEffect(async () => {
-    const result = await fetch(`${process.env.GATSBY_API_URL}/users`).then(
-      res => res.json()
-    )
-    setData(result.data)
-  })
-  console.log(data)
+  console.log(process.env.GATSBY_EMAILJS)
+  const form = useRef()
 
-  function sendEmail(e) {
+  const sendEmail = e => {
     e.preventDefault()
 
     emailjs
-      .sendForm("default_service", "template_7kuen38", e.target, data)
+      .sendForm(
+        "default_service",
+        "template_7kuen38",
+        form.current,
+        process.env.GATSBY_EMAILJS
+      )
       .then(
         result => {
           console.log(result.text)
@@ -50,14 +49,13 @@ export default function Email() {
   }
 
   return (
-    <form className="contact-form" onSubmit={sendEmail}>
-      <input type="hidden" name="contact_number" />
+    <form ref={form} onSubmit={sendEmail}>
       <label>Name</label>
       <input type="text" name="user_name" />
       <label>Email</label>
       <input type="email" name="user_email" />
       <label>Message</label>
-      <textarea name="user_message" />
+      <textarea name="message" />
       <input type="submit" value="Send" />
     </form>
   )

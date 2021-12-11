@@ -1,6 +1,3 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -9,12 +6,6 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
-    {
-      resolve: `gatsby-source-custom`,
-      options: {
-        apiKey: process.env.API_KEY,
-      },
-    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
