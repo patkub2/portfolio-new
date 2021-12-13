@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
 import emailjs from "emailjs-com"
 import { colors, media, typography } from "../../utils"
+import Button from "./Button"
 
 const Input = styled.input`
   width: 100%;
@@ -15,17 +16,23 @@ const Submit = styled.input`
   box-sizing: border-box;
   border-radius: 10px;
 `
-const Message = styled.input`
+const Message = styled.textarea`
   width: 100%;
   border: 3px solid #000000;
   box-sizing: border-box;
   border-radius: 10px;
+  resize: none;
 `
 const Label = styled.div`
-  width: 90%;
+  margin-top: 15px;
+  //border: 1px solid blue; /* BORDER TEST*/
+  width: 100%;
+`
+const Form = styled.form`
+  border: 1px solid blue; /* BORDER TEST*/
+  width: 100%;
 `
 export default function Email() {
-  console.log(process.env.GATSBY_EMAILJS)
   const form = useRef()
 
   const sendEmail = e => {
@@ -49,14 +56,14 @@ export default function Email() {
   }
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" />
-    </form>
+    <Form ref={form} onSubmit={sendEmail}>
+      <Label>Name</Label>
+      <Input type="text" name="user_name" />
+      <Label>Email</Label>
+      <Input type="email" name="user_email" />
+      <Label>Message</Label>
+      <Message name="message" name="user_message" />
+      <Submit type="submit" value="Send" />
+    </Form>
   )
 }

@@ -2,9 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { colors, media, typography } from "../../utils"
 import Title from "../Title"
+import Button from "./Button"
 import Email from "./Email"
 const Container = styled.div`
-  border: 1px solid blue; /* BORDER TEST*/
+  border: 1px solid purple; /* BORDER TEST*/
 
   display: flex;
   justify-content: flex-start;
@@ -22,7 +23,7 @@ const Icons = styled.div`
   width: 100%;
 `
 const Form = styled.div`
-  border: 1px solid blue; /* BORDER TEST*/
+  border: 5px solid pink; /* BORDER TEST*/
 
   display: flex;
   justify-content: flex-start;
@@ -30,28 +31,6 @@ const Form = styled.div`
   flex-wrap: wrap;
   width: 100%;
   font-size: ${typography.h6};
-`
-
-const Input = styled.input`
-  width: 100%;
-  border: 3px solid #000000;
-  box-sizing: border-box;
-  border-radius: 10px;
-`
-const Submit = styled.input`
-  width: 100%;
-  border: 3px solid #000000;
-  box-sizing: border-box;
-  border-radius: 10px;
-`
-const Message = styled.input`
-  width: 100%;
-  border: 3px solid #000000;
-  box-sizing: border-box;
-  border-radius: 10px;
-`
-const Label = styled.div`
-  width: 90%;
 `
 
 export default function Contact(prop) {
@@ -64,7 +43,10 @@ export default function Contact(prop) {
         <Form>
           <Email />
         </Form>
-        <Icons></Icons>
+        <Icons>
+          {" "}
+          <Button>cos</Button>
+        </Icons>
       </Container>
     </>
   )
