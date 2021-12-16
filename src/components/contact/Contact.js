@@ -43,10 +43,7 @@ export default function Contact(prop) {
         <Form>
           <Email />
         </Form>
-        <Icons>
-          {" "}
-          <Button>cos</Button>
-        </Icons>
+        <Icons> </Icons>
       </Container>
     </>
   )

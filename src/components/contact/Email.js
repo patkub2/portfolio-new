@@ -3,6 +3,7 @@ import styled from "styled-components"
 import emailjs from "emailjs-com"
 import { colors, media, typography } from "../../utils"
 import Button from "./Button"
+import "./index.css"
 
 const Input = styled.input`
   width: 100%;
@@ -58,12 +59,16 @@ export default function Email() {
   return (
     <Form ref={form} onSubmit={sendEmail}>
       <Label>Name</Label>
-      <Input type="text" name="user_name" />
+      <Input type="text" name="user_name" required />
       <Label>Email</Label>
-      <Input type="email" name="user_email" />
+      <Input type="email" name="user_email" required />
       <Label>Message</Label>
-      <Message name="message" name="user_message" />
-      <Submit type="submit" value="Send" />
+      <Message name="message" name="user_message" required />
+      <input
+        type="submit"
+        value="Send"
+        class="uiui-button uiui-button--glow example-1"
+      />
     </Form>
   )
 }

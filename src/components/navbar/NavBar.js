@@ -7,6 +7,7 @@ import styled from "styled-components"
 import { colors, media, typography } from "../../utils"
 const Container = styled.div`
   width: 100%;
+  max-width: 1700px;
   position: fixed;
   border: 1px solid red; /* BORDER TEST*/
   padding: 0;
