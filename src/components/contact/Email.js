@@ -1,9 +1,10 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
 import styled from "styled-components"
 import emailjs from "emailjs-com"
 import { colors, media, typography } from "../../utils"
 import Button from "./Button"
 import "./index.css"
+import ReCAPTCHA from "react-google-recaptcha"
 
 const Input = styled.input`
   width: 100%;
@@ -35,7 +36,7 @@ const Form = styled.form`
 `
 export default function Email() {
   const form = useRef()
-
+  const [submitted, setSubmitted] = useState(false)
   const sendEmail = e => {
     e.preventDefault()
 
@@ -64,11 +65,22 @@ export default function Email() {
       <Input type="email" name="user_email" required />
       <Label>Message</Label>
       <Message name="message" name="user_message" required />
+      <ReCAPTCHA
+        sitekey={process.env.GATSBY_CAPTCHA}
+        onChange={() => setSubmitted(true)}
+      />
       <input
         type="submit"
         value="Send"
-        class="uiui-button uiui-button--glow example-1"
+        className="uiui-button uiui-button--glow example-1"
       />
+      <button
+        onClick={() => {
+          console.log(submitted)
+        }}
+      >
+        asd
+      </button>
     </Form>
   )
 }

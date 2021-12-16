@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@pittica/gatsby-plugin-recaptcha": "^2.0.3",
     "dotenv": "^10.0.0",
     "emailjs-com": "^3.2.0",
     "gatsby": "^3.10.2",
