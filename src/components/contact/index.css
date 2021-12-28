@@ -1,6 +1,7 @@
 .uiui-button {
   width: 100%;
   padding: 18px 25px;
+  margin: 10px 0;
   border: none;
   outline: none;
   cursor: pointer;
@@ -22,11 +23,11 @@
   content: "";
   background: linear-gradient(
     45deg,
-    #ff3c3c,
-    #4968ff,
-    #a34dff,
-    #ff53da,
-    #ff4444
+    #000ba3,
+    #00ffff,
+    #00ffff,
+    #00ffea,
+    #00ffff
   );
   position: absolute;
   top: 0;
@@ -44,11 +45,11 @@
 }
 
 .uiui-button--glow:hover {
-  transform: scale(1.025) translateZ(0);
+  transform: scale(0.98) translateZ(0);
 }
 .uiui-button--glow:hover:before {
   opacity: 1;
-  transform: translateZ(0) scaleX(1.045) scaleY(1.145);
+  transform: translateZ(0) scaleX(1.025) scaleY(1.25);
 }
 .uiui-button--glow:active::after {
   background: rgb(36, 36, 36);

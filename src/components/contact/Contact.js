@@ -4,6 +4,7 @@ import { colors, media, typography } from "../../utils"
 import Title from "../Title"
 import Button from "./Button"
 import Email from "./Email"
+import Icons from "./Icons"
 const Container = styled.div`
   border: 1px solid purple; /* BORDER TEST*/
 
@@ -20,7 +21,7 @@ const Container = styled.div`
   justify-content: flex-start;
   `}
 `
-const Icons = styled.div`
+const Media = styled.div`
   border: 1px solid red; /* BORDER TEST*/
 
   display: flex;
@@ -64,7 +65,9 @@ export default function Contact(prop) {
         <Form>
           <Email />
         </Form>
-        <Icons>fgsdf </Icons>
+        <Media>
+          <Icons />{" "}
+        </Media>
       </Container>
     </>
   )

@@ -54,6 +54,7 @@ export default function Email() {
         .then(
           result => {
             recaptchaRef.current.reset()
+            setSubmitted(!submitted)
             console.log(result.text)
             toast.success("email sent successfully", {
               position: "bottom-right",
@@ -69,6 +70,7 @@ export default function Email() {
           },
           error => {
             recaptchaRef.current.reset()
+            setSubmitted(!submitted)
             console.log(error.text)
             toast.error("oh no, something went wrong", {
               position: "bottom-right",
@@ -95,7 +97,7 @@ export default function Email() {
       })
     }
   }
-  const notify = () => recaptchaRef.current.reset()
+  const notify = () => console.log(submitted)
   //<button onClick={() => notify()}>sada</button>
   return (
     <>
@@ -118,7 +120,7 @@ export default function Email() {
           Send
         </button>
       </Form>
-
+      <button onClick={() => notify()}>sada</button>
       <ToastContainer
         position="bottom-center"
         autoClose={3000}
