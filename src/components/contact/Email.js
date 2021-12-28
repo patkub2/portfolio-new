@@ -38,6 +38,7 @@ const Form = styled.form`
   width: 100%;
 `
 export default function Email() {
+  const recaptchaRef = useRef()
   const form = useRef()
   const [submitted, setSubmitted] = useState(false)
   const sendEmail = e => {
@@ -52,6 +53,7 @@ export default function Email() {
         )
         .then(
           result => {
+            recaptchaRef.current.reset()
             console.log(result.text)
             toast.success("email sent successfully", {
               position: "bottom-right",
@@ -66,6 +68,7 @@ export default function Email() {
             document.getElementById("form").reset()
           },
           error => {
+            recaptchaRef.current.reset()
             console.log(error.text)
             toast.error("oh no, something went wrong", {
               position: "bottom-right",
@@ -92,7 +95,8 @@ export default function Email() {
       })
     }
   }
-  const notify = () => console.log(submitted)
+  const notify = () => recaptchaRef.current.reset()
+  //<button onClick={() => notify()}>sada</button>
   return (
     <>
       <Form id="form" ref={form} onSubmit={sendEmail}>
@@ -103,15 +107,18 @@ export default function Email() {
         <Label>Message</Label>
         <Message name="message" name="user_message" required />
         <ReCAPTCHA
+          ref={recaptchaRef}
           sitekey={process.env.GATSBY_CAPTCHA}
           onChange={() => setSubmitted(!submitted)}
         />
-        <input
+        <button
           type="submit"
-          value="Send"
           className="uiui-button uiui-button--glow example-1"
-        />
+        >
+          Send
+        </button>
       </Form>
+
       <ToastContainer
         position="bottom-center"
         autoClose={3000}
