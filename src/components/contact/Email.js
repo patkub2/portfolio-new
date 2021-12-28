@@ -112,7 +112,6 @@ export default function Email() {
           className="uiui-button uiui-button--glow example-1"
         />
       </Form>
-      <button onClick={notify}>Notify !</button>
       <ToastContainer
         position="bottom-center"
         autoClose={3000}

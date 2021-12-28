@@ -12,6 +12,13 @@ const Container = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  ${media.tablet`
+  
+  justify-content: center;
+  `}
+  ${media.desktop`
+  justify-content: flex-start;
+  `}
 `
 const Icons = styled.div`
   border: 1px solid red; /* BORDER TEST*/
@@ -21,6 +28,13 @@ const Icons = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  ${media.tablet`
+  width: 80%;
+  justify-content: center;
+  `}
+  ${media.desktop`
+  width: 50%;
+  `}
 `
 const Form = styled.div`
   border: 5px solid pink; /* BORDER TEST*/
@@ -31,6 +45,13 @@ const Form = styled.div`
   flex-wrap: wrap;
   width: 100%;
   font-size: ${typography.h6};
+  ${media.tablet`
+  width: 80%;
+  justify-content: center;
+  `}
+  ${media.desktop`
+  width: 50%;
+  `}
 `
 
 export default function Contact(prop) {
@@ -43,7 +64,7 @@ export default function Contact(prop) {
         <Form>
           <Email />
         </Form>
-        <Icons> </Icons>
+        <Icons>fgsdf </Icons>
       </Container>
     </>
   )
