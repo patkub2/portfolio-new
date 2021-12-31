@@ -15,12 +15,7 @@ const Input = styled.input`
   box-sizing: border-box;
   border-radius: 10px;
 `
-const Submit = styled.input`
-  width: 100%;
-  border: 3px solid #000000;
-  box-sizing: border-box;
-  border-radius: 10px;
-`
+
 const Message = styled.textarea`
   width: 100%;
   border: 3px solid #000000;

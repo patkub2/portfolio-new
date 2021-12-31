@@ -34,7 +34,8 @@ const Media = styled.div`
   justify-content: center;
   `}
   ${media.desktop`
-  width: 50%;
+  width: 48%;
+  margin-left:2%;
   `}
 `
 const Form = styled.div`
@@ -51,11 +52,12 @@ const Form = styled.div`
   justify-content: center;
   `}
   ${media.desktop`
-  width: 50%;
+  width: 48%;
+  margin-right:2%;
   `}
 `
 
-export default function Contact(prop) {
+export default function Contact() {
   return (
     <>
       <Container>
