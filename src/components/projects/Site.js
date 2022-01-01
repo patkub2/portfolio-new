@@ -20,6 +20,25 @@ const Container = styled.div`
   padding-top: 60px;
   `} //margin: 1% 0;
 `
+const Containermirror = styled.div`
+  //border: 2px solid blue; /* BORDER TEST*/
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-style: normal;
+  flex-direction: column-reverse;
+  width: 100%;
+  margin-bottom: 100px;
+  ${media.tablet`
+  width: 95%;
+  
+  `}
+  ${media.desktop`
+  width: 100%;
+  padding-top: 60px;flex-direction: row;
+  `}
+`
 const TextB = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
   margin: 20px 0px;
@@ -157,7 +176,7 @@ export default function Site(prop) {
   const num = prop.tech
   if (prop.mirror) {
     return (
-      <Container>
+      <Containermirror>
         <Text>
           <TextB>{prop.title}</TextB>
           <TextSm>{prop.children}</TextSm>
@@ -182,7 +201,7 @@ export default function Site(prop) {
         <Pic>
           <Picture img={prop.img} />
         </Pic>
-      </Container>
+      </Containermirror>
     )
   } else
     return (
