@@ -3,6 +3,7 @@ import "./index.css"
 import React from "react"
 import Burgermenu from "./Burgermenu"
 import styled from "styled-components"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 import { colors, media, typography } from "../../utils"
 const Container = styled.div`
@@ -38,7 +39,7 @@ const Img = styled.img`
   height: 100%;
   margin: 0 10px;
 `
-const Link = styled.a`
+const Link = styled.button`
   border: 1px solid yellow; /* BORDER TEST*/
   font-size: ${typography.h5};
   font-weight: 400;
@@ -70,7 +71,7 @@ export default function NavBar() {
         </Name>
 
         <Menu>
-          <Link>Home</Link>
+          <Link onClick={() => scrollTo("#contact")}>Home</Link>
           <Link>Technologies</Link>
           <Link>Projects</Link>
           <Link>Contact</Link>

@@ -61,7 +61,7 @@ export default function Contact() {
   return (
     <>
       <Container>
-        <Title title="Contact">
+        <Title title="Contact" id="contact">
           All informations and links can be found below. Feel free to contact me
         </Title>
         <Form>
