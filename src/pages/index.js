@@ -68,6 +68,7 @@ function IndexPage() {
         </Container>
         <Space2 />
       </Phone>
+      <div id="test"></div>
     </Conf>
   )
 }

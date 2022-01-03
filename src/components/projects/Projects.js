@@ -39,7 +39,7 @@ const Container = styled.div`
 
 export default function Projects() {
   return (
-    <Container>
+    <Container id="projects">
       <Title title="Projects">
         Bellow you can find most of my project. All of them got a live version
         and an open github repo

@@ -4,8 +4,9 @@ import React from "react"
 import Burgermenu from "./Burgermenu"
 import styled from "styled-components"
 import scrollTo from "gatsby-plugin-smoothscroll"
-
 import { colors, media, typography } from "../../utils"
+import { AnchorLink } from "gatsby-plugin-anchor-links"
+
 const Container = styled.div`
   width: 100%;
   max-width: 1700px;
@@ -71,10 +72,13 @@ export default function NavBar() {
         </Name>
 
         <Menu>
-          <Link onClick={() => scrollTo("#contact")}>Home</Link>
+          <Link>Home</Link>
           <Link>Technologies</Link>
           <Link>Projects</Link>
           <Link>Contact</Link>
+          <a href="#test">Test Post</a>
+          <AnchorLink to="#projects">About</AnchorLink>
+          <AnchorLink to="#projects">About</AnchorLink>
         </Menu>
       </Container>
 
