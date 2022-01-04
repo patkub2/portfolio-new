@@ -31,7 +31,7 @@ const TextSm = styled.div`
 export default function Apps(prop) {
   return (
     <>
-      <Container>
+      <Container id="technologies">
         <img src={arrow}></img>
         <TextSm>{prop.children}</TextSm>
       </Container>

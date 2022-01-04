@@ -1,21 +1,40 @@
 import { slide as Menu } from "react-burger-menu"
 import "./index.css"
-import React from "react"
+import React, { useState } from "react"
+import styled from "styled-components"
+import { colors, media, typography } from "../../utils"
+const Link = styled.a`
+  //border: 1px solid red; /* BORDER TEST*/
+
+  font-size: ${typography.h3};
+`
+
 export default function Burgermenu() {
+  const [menuOpenState, setMenuOpenState] = useState(false)
+
+  const Close = () => setMenuOpenState(false)
   return (
-    <div>
-      <Menu right>
-        <a id="home" className="menu-item" href="/">
+    <>
+      <Menu
+        right
+        width={"40%"}
+        isOpen={menuOpenState}
+        onOpen={() => setMenuOpenState(true)}
+        onClose={() => setMenuOpenState(false)}
+      >
+        <Link href="#home" onClick={Close}>
           Home
-        </a>
-        <a id="about" className="menu-item" href="/about">
-          About
-        </a>
-        <a id="contact" className="menu-item" href="/contact">
+        </Link>
+        <Link href="#technologies" onClick={Close}>
+          Technologies
+        </Link>
+        <Link href="#projects" onClick={Close}>
+          Projects
+        </Link>
+        <Link href="#emaile" onClick={Close}>
           Contact
-        </a>
-        <a className="menu-item--small">Settings</a>
+        </Link>
       </Menu>
-    </div>
+    </>
   )
 }

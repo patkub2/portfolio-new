@@ -13,6 +13,7 @@ const Container = styled.div`
   min-height: 100px;
   width: 100%;
   margin-bottom: 50px;
+  margin-top: 20px;
   ${media.desktop`
   
   padding-left: 60px;

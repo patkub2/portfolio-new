@@ -60,8 +60,8 @@ const Form = styled.div`
 export default function Contact() {
   return (
     <>
-      <Container>
-        <Title title="Contact" id="contact">
+      <Container id="emaile">
+        <Title title="Contact">
           All informations and links can be found below. Feel free to contact me
         </Title>
         <Form>

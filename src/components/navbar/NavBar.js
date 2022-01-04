@@ -40,13 +40,15 @@ const Img = styled.img`
   margin: 0 10px;
 `
 const Link = styled.a`
-  border: 1px solid red; /* BORDER TEST*/
+  //border: 1px solid red; /* BORDER TEST*/
   font-size: ${typography.h5};
   font-weight: 400;
   margin: 0 5px;
   text-decoration: none;
   color: black;
   padding: 10px 20px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
   svg {
     position: absolute;
   }
@@ -105,25 +107,7 @@ export default function NavBar() {
           <Link href="#home">Home</Link>
           <Link href="#technologies">Technologies</Link>
           <Link href="#projects">Projects</Link>
-          <Link href="#contact">Contact</Link>
-          <svg
-            width="104"
-            height="44"
-            viewBox="0 0 104 44"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              id="buttonsvg"
-              x="1"
-              y="1"
-              width="102"
-              height="42"
-              stroke="black"
-              stroke-width="2"
-            />
-          </svg>
-          Contact
+          <Link href="#emaile">Contact</Link>
         </Menu>
       </Container>
 
