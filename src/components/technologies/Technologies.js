@@ -32,7 +32,7 @@ const AppsContainer = styled.div`
 
 export default function Technologies() {
   return (
-    <Container>
+    <Container id="technologies">
       <Title title="Technologies">
         These are the technologies I work with currently or used in my past
         projects.

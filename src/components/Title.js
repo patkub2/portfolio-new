@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { typography, media } from "../utils"
 const Container = styled.div`
-  border: 1px solid blue; /* BORDER TEST*/
+  //border: 1px solid blue; /* BORDER TEST*/
 
   display: flex;
   //justify-content: center;
@@ -19,7 +19,7 @@ const Container = styled.div`
   `}
 `
 const TextContainer = styled.div`
-  //border: 1px solid green; /* BORDER TEST*/
+  ////border: 1px solid green; /* BORDER TEST*/
 
   height: 100%;
   display: flex;
@@ -29,7 +29,7 @@ const TextContainer = styled.div`
   font-weight: 300;
 `
 const TextB = styled.div`
-  //border: 1px solid red; /* BORDER TEST*/
+  ////border: 1px solid red; /* BORDER TEST*/
   margin-top: 2%;
   margin-left: 2%;
   display: flex;
@@ -39,7 +39,7 @@ const TextB = styled.div`
   font-size: ${typography.h2};
 `
 const TextSm = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
+  //border: 1px solid red; /* BORDER TEST*/
   width: 100%;
   display: flex;
   align-items: center;

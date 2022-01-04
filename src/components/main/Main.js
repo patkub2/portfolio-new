@@ -79,7 +79,7 @@ const Button = styled.button`
 
 export default function Main() {
   return (
-    <Container>
+    <Container id="home">
       <Title>Patryk Kubala</Title>
       <TitleSm>Front-end developer</TitleSm>
       <Button>See more</Button>{" "}
