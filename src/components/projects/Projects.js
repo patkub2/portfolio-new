@@ -52,7 +52,7 @@ export default function Projects() {
         tech={[
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],
-          ["Redux", reduxIcon],
+
           ["GSAP", gsapIcon],
           ["Gatsby", gatsbyIcon],
         ]}

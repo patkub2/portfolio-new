@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { colors, media, typography } from "../../utils"
 const Container = styled.div`
-  margin: 72px 0;
+  margin-top: 160px;
+  margin-bottom: 20px;
   //border: 1px solid red; /* BORDER TEST*/
   margin-right: 0vw;
   min-height: 50%;
@@ -12,6 +13,7 @@ const Container = styled.div`
   align-items: center;
   flex-wrap: wrap;
   ${media.desktop`
+  margin: 72px 0;
   margin-right: 5vw;
     align-items: flex-end;
     
@@ -41,14 +43,15 @@ const TitleSm = styled.div`
   align-items: center;
   font-weight: 500;
   font-size: ${typography.h5};
-  margin-bottom: 40px;
 
   ${media.desktop`
     justify-content: flex-end;
+    margin-bottom: 40px;
   `}
 `
 
 const Button = styled.button`
+  display: none;
   font-size: ${typography.h6};
   font-weight: 500;
   letter-spacing: 1px;
@@ -75,11 +78,14 @@ const Button = styled.button`
     top: -10px;
     right: -10px;
   }
+  ${media.desktop`
+  display: block;
+  `}
 `
 
 export default function Main() {
   return (
-    <Container id="home">
+    <Container>
       <Title>Patryk Kubala</Title>
       <TitleSm>Front-end developer</TitleSm>
       <Button>See more</Button>{" "}

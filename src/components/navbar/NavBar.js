@@ -97,7 +97,7 @@ export default function NavBar() {
   }, [])
   return (
     <>
-      <Container className="navbar">
+      <Container className="navbar" id="home">
         <Name>
           <Img src={logo}></Img>
           Patryk Kubala

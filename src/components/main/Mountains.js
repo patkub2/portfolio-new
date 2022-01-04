@@ -22,11 +22,17 @@ const Container = styled.div`
   overflow: hidden;
   width: 80vw;
   height: 80vw;
+  max-width: 700px;
+  max-height: 700px;
+  margin: 0 50px;
   justify-content: flex-start;
   align-items: center;
   ${media.desktop`
+  margin: 0;
     width: 50vw;
     height: 50vw;
+  max-width: none;
+  max-height: none;
   `}
 
   .mountains {
