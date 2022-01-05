@@ -29,7 +29,7 @@ const Label = styled.div`
   width: 100%;
 `
 const Form = styled.form`
-  border: 1px solid blue; /* BORDER TEST*/
+  //border: 1px solid blue; /* BORDER TEST*/
   width: 100%;
 `
 export default function Email() {
@@ -115,7 +115,7 @@ export default function Email() {
           Send
         </button>
       </Form>
-      <button onClick={() => notify()}>sada</button>
+
       <ToastContainer
         position="bottom-center"
         autoClose={3000}

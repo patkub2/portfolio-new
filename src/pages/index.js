@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger)
 const Container = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
   padding: 0;
-  margin: 10px;
+  //margin: 10px;
   max-width: 1700px;
   //background-color: #130d0a;
   font-family: "Rubik", sans-serif;
@@ -41,6 +41,7 @@ const Phone = styled.div`
   //width: 360px;
 `
 const Conf = styled.div`
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;

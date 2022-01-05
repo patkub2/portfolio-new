@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 const Container = styled.div`
   //border: 1px solid blue; /* BORDER TEST*/
-
   height: auto;
   display: flex;
   justify-content: center;
@@ -14,7 +13,6 @@ const Container = styled.div`
   position: relative;
   background-color: white;
   width: 100%;
-
   ::after {
     content: "";
     background-color: #a8a8a8;

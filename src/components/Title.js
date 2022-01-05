@@ -11,7 +11,7 @@ const Container = styled.div`
   font-style: normal;
   padding: 0;
   min-height: 100px;
-  width: 100%;
+  width: 90%;
   margin-bottom: 50px;
   margin-top: 20px;
   ${media.desktop`

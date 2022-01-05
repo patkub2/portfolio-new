@@ -24,7 +24,7 @@ const Container = styled.div`
   height: 80vw;
   max-width: 700px;
   max-height: 700px;
-  margin: 0 50px;
+  //margin: 0 50px;
   justify-content: flex-start;
   align-items: center;
   ${media.desktop`
@@ -33,6 +33,9 @@ const Container = styled.div`
     height: 50vw;
   max-width: none;
   max-height: none;
+  `}
+  ${media.tablet`
+  margin: 0 50px;
   `}
 
   .mountains {

@@ -17,6 +17,7 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

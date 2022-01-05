@@ -28,7 +28,7 @@ const Containermirror = styled.div`
   flex-wrap: wrap;
   font-style: normal;
   flex-direction: column-reverse;
-  width: 100%;
+  width: 95%;
   margin-bottom: 100px;
   ${media.tablet`
   width: 95%;
@@ -36,7 +36,8 @@ const Containermirror = styled.div`
   `}
   ${media.desktop`
   width: 100%;
-  padding-top: 60px;flex-direction: row;
+  padding-top: 60px;
+  flex-direction: row;
   `}
 `
 const TextB = styled.div`
@@ -63,7 +64,7 @@ const TextSm = styled.div`
 const Pic = styled.div`
   //background-color: black;
   //border: 1px solid red; /* BORDER TEST*/
-  margin: 20px;
+  //margin: 20px;
   width: 100%;
   ${media.desktop`
   width: 50%;

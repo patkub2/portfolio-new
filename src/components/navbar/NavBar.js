@@ -69,6 +69,52 @@ const BurgermenuContainer = styled.div`
 display: none;
   `}
 `
+const Wrapper = styled.div`
+  margin: 0 5px;
+  a {
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    //border: 2px solid #333;
+    border-bottom: 2px solid #333;
+    border-right: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all 0.35s;
+  }
+
+  a span {
+    position: relative;
+    z-index: 2;
+  }
+
+  a:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: black;
+    transition: all 0.35s;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+
+  a:hover:after {
+    width: 100%;
+  }
+`
+
 export default function NavBar() {
   if (typeof window !== "undefined") {
     // eslint-disable-next-line global-require
@@ -104,10 +150,26 @@ export default function NavBar() {
         </Name>
 
         <Menu>
-          <Link href="#home">Home</Link>
-          <Link href="#technologies">Technologies</Link>
-          <Link href="#projects">Projects</Link>
-          <Link href="#emaile">Contact</Link>
+          <Wrapper>
+            <a href="#home">
+              <span>Home</span>
+            </a>
+          </Wrapper>
+          <Wrapper>
+            <a href="#technologies">
+              <span>Technologies</span>
+            </a>
+          </Wrapper>
+          <Wrapper>
+            <a href="#projects">
+              <span>Projects</span>
+            </a>
+          </Wrapper>
+          <Wrapper>
+            <a href="#emaile">
+              <span>Contact</span>
+            </a>
+          </Wrapper>
         </Menu>
       </Container>
 

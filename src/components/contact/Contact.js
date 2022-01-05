@@ -6,7 +6,7 @@ import Button from "./Button"
 import Email from "./Email"
 import Icons from "./Icons"
 const Container = styled.div`
-  border: 1px solid purple; /* BORDER TEST*/
+  //border: 1px solid purple; /* BORDER TEST*/
 
   display: flex;
   justify-content: flex-start;
@@ -18,11 +18,12 @@ const Container = styled.div`
   justify-content: center;
   `}
   ${media.desktop`
+  width: 80%;
   justify-content: flex-start;
   `}
 `
 const Media = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
+  //border: 1px solid red; /* BORDER TEST*/
 
   display: flex;
   justify-content: flex-start;
@@ -39,7 +40,7 @@ const Media = styled.div`
   `}
 `
 const Form = styled.div`
-  border: 5px solid pink; /* BORDER TEST*/
+  //border: 5px solid pink; /* BORDER TEST*/
 
   display: flex;
   justify-content: flex-start;
@@ -60,10 +61,11 @@ const Form = styled.div`
 export default function Contact() {
   return (
     <>
+      {" "}
+      <Title title="Contact">
+        All informations and links can be found below. Feel free to contact me
+      </Title>
       <Container id="emaile">
-        <Title title="Contact">
-          All informations and links can be found below. Feel free to contact me
-        </Title>
         <Form>
           <Email />
         </Form>

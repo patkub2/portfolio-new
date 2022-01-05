@@ -11,7 +11,7 @@ const Container = styled.div`
     width: 100%;
     color: black;
   }
-  border: 1px solid purple; /* BORDER TEST*/
+  //border: 1px solid purple; /* BORDER TEST*/
 
   display: flex;
   justify-content: flex-start;
@@ -31,27 +31,27 @@ const Element = styled.div`
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  border: 1px solid blue; /* BORDER TEST*/
+
   margin: 10px 0;
 
   justify-content: flex-start;
 `
 const Img = styled.img`
-  border: 1px solid blue; /* BORDER TEST*/
+  //border: 1px solid blue; /* BORDER TEST*/
   margin: 0;
 `
 const Text = styled.div`
-  border: 1px solid red; /* BORDER TEST*/
+  //border: 1px solid red; /* BORDER TEST*/
   margin-left: 1%;
 `
 const Title = styled.div`
-  border: 1px solid pink; /* BORDER TEST*/
+  //border: 1px solid pink; /* BORDER TEST*/
   font-size: ${typography.h5};
 `
 
 const Desc = styled.div`
-  border: 1px solid orange; /* BORDER TEST*/
-  font-size: ${typography.h6};
+  //border: 1px solid orange; /* BORDER TEST*/
+  font-size: ${typography.h65};
 `
 
 export default function Icons() {
