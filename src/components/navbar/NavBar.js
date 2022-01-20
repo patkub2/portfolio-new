@@ -79,11 +79,11 @@ const Wrapper = styled.div`
     font-size: 18px;
     font-family: sans-serif;
     text-decoration: none;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    background-color: rgba(255, 255, 255, 1);
     //border: 2px solid #333;
-    border-bottom: 2px solid #333;
-    border-right: 2px solid #333;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
     letter-spacing: 2px;
     text-align: center;
     position: relative;

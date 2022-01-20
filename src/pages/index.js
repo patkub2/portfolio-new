@@ -67,7 +67,6 @@ function IndexPage() {
           <Projects />
           <Contact />
         </Container>
-        <Space2 />
       </Phone>
       <div id="test"></div>
     </Conf>
