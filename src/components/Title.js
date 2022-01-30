@@ -75,8 +75,6 @@ export default function Title(prop) {
         trigger: ".TitleCont",
         start: "center bottom", // the default values
         end: "bottom top",
-
-        markers: true,
       },
     })
   }, [])

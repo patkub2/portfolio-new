@@ -13,6 +13,20 @@ const Container = styled.div`
   position: relative;
   background-color: white;
   width: 100%;
+  :hover {
+    ::after {
+      content: "";
+      background-color: black;
+      border-radius: 10px;
+      width: 100%;
+      z-index: -1;
+      position: absolute;
+      height: 100%;
+      top: 00px;
+      right: 00px;
+      transition: 0.3s;
+    }
+  }
   ::after {
     content: "";
     background-color: #a8a8a8;
@@ -35,12 +49,17 @@ const Img = styled.img`
   padding: 0;
   border-radius: 7px;
   cursor: pointer;
+  :hover {
+    opacity: 90;
+  }
 `
 
 export default function Picture(prop) {
   return (
     <Container>
-      <Img src={prop.img}></Img>
+      <a href={prop.live}>
+        <Img src={prop.img}></Img>
+      </a>
     </Container>
   )
 }

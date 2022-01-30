@@ -207,7 +207,7 @@ export default function Site(prop) {
           </ButtonContainer>
         </Text>{" "}
         <Pic>
-          <Picture img={prop.img} />
+          <Picture img={prop.img} live={prop.live} />
         </Pic>
       </Containermirror>
     )
@@ -215,7 +215,7 @@ export default function Site(prop) {
     return (
       <Container>
         <Pic>
-          <Picture img={prop.img} />
+          <Picture img={prop.img} live={prop.live} />
         </Pic>
         <Text>
           <TextB>{prop.title}</TextB>

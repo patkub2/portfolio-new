@@ -4,22 +4,17 @@ import image1 from "../../images/image1.png"
 import image2 from "../../images/image2.png"
 import image3 from "../../images/image3.png"
 import image4 from "../../images/image4.png"
+import image5 from "../../images/image5.png"
 import Title from "../Title"
 import Site from "./Site"
-import { media, colors, typography } from "../../utils"
-import htmlIcon from "../../images/icons/html-skew.svg"
-import cssIcon from "../../images/icons/css-skew.svg"
 import sassIcon from "../../images/icons/sass-skew.svg"
-import jsIcon from "../../images/icons/javascript-skew.svg"
 import tsIcon from "../../images/icons/typescript-skew.svg"
 import reactIcon from "../../images/icons/react-skew.svg"
 import reduxIcon from "../../images/icons/redux-skew.svg"
 import gatsbyIcon from "../../images/icons/gatsby-skew.svg"
-import gitIcon from "../../images/icons/git-skew.svg"
 import gsapIcon from "../../images/icons/gsap.svg"
 import styledComponentsIcon from "../../images/icons/styled-components.svg"
 import axiosIcon from "../../images/icons/axios.svg"
-import rwdIcon from "../../images/rwd.png"
 import apiIcon from "../../images/api.png"
 import mongodbIcon from "../../images/mongodb.png"
 import nodejsIcon from "../../images/nodejs.png"
@@ -45,10 +40,10 @@ export default function Projects() {
         and an open github repo
       </Title>
       <Site
-        img={image4}
+        img={image5}
         title="Portfolio"
         github="https://github.com/patkub2/portfolio-new"
-        live="https://github.com/patkub2/portfolio-new"
+        live="#"
         tech={[
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],
@@ -57,9 +52,9 @@ export default function Projects() {
           ["Gatsby", gatsbyIcon],
         ]}
       >
-        Portfolio page made in react. Redux has been used to change the language
-        of the page without having to refresh it. For styling I used
-        styled-components. Animations were made in GSAP.
+        Portfolio page made in react with use of Gatsby. In this project i manly
+        focused on learning gatsby and animations in GSAP . For styling I used
+        styled-components.
       </Site>
       <Site
         mirror
@@ -76,9 +71,9 @@ export default function Projects() {
           ["Express", expressIcon],
         ]}
       >
-        A small ReactJS-based web application and local storage that includes
-        some basic functions such as editing and deleting. The purpose of the
-        app is to help people record and analyze the cost of their lives.
+        The latest project I'm still working on. Online store which will allow
+        the customer to log in and add products to cart. Also a option to add
+        new products from the administrator level. Page still in development.
       </Site>
       <Site
         img={image4}

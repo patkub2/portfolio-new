@@ -44,8 +44,6 @@ export default function Apps(prop) {
         trigger: "#technologies",
         start: "top center", // the default values
         end: "bottom top",
-
-        markers: true,
       },
     })
   }, [])

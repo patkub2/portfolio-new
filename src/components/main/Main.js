@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
 import { colors, media, typography } from "../../utils"
-import { TimelineLite, Power3 } from "gsap"
+import { Power3 } from "gsap"
 import gsap from "gsap"
 const Container = styled.div`
   margin-top: 160px;
