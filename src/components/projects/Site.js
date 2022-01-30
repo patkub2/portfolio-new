@@ -42,8 +42,13 @@ const Containermirror = styled.div`
 `
 const TextB = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
-  margin: 20px 0px;
+  margin: 30px 0px;
+
+  font-size: ${typography.h4};
+  ${media.desktop`
   font-size: ${typography.h3};
+  margin: 40px 0px;
+  `}
 `
 const Text = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
@@ -51,8 +56,10 @@ const Text = styled.div`
   align-items: center;
   flex-wrap: wrap;
 
+  font-size: ${typography.h5};
   ${media.desktop`
   width: 40%;
+  font-size: ${typography.h4};
   `}//margin: 1% 0;
 `
 const TextSm = styled.div`

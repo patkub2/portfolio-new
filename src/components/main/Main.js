@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
 import { colors, media, typography } from "../../utils"
+import { TimelineLite, Power3 } from "gsap"
+import gsap from "gsap"
 const Container = styled.div`
   margin-top: 160px;
   margin-bottom: 20px;
@@ -84,8 +86,16 @@ const Button = styled.button`
 `
 
 export default function Main() {
+  useEffect(() => {
+    let t1 = gsap.timeline({ delay: 1 })
+    t1.from(
+      ".cont",
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.3 },
+      "Start"
+    )
+  }, [])
   return (
-    <Container>
+    <Container className="cont">
       <Title>Patryk Kubala</Title>
       <TitleSm>Front-end developer</TitleSm>
       <Button>See more</Button>{" "}

@@ -5,6 +5,7 @@ import Burgermenu from "./Burgermenu"
 import styled from "styled-components"
 import { colors, media, typography } from "../../utils"
 import gsap from "gsap"
+import { Power3 } from "gsap"
 const Container = styled.div`
   width: 100%;
   max-width: 1700px;
@@ -80,7 +81,7 @@ const Wrapper = styled.div`
     font-family: sans-serif;
     text-decoration: none;
     color: black;
-    background-color: rgba(255, 255, 255, 1);
+    //background-color: rgba(255, 255, 255, 1);
     //border: 2px solid #333;
     border-bottom: 2px solid black;
     border-right: 2px solid black;
@@ -140,6 +141,14 @@ export default function NavBar() {
         },
       },
     })
+  }, [])
+  useEffect(() => {
+    let t1 = gsap.timeline({ delay: 1 })
+    t1.from(
+      ".navbar",
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.3 },
+      "Start"
+    )
   }, [])
   return (
     <>

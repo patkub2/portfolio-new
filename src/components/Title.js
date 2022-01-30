@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { typography, media } from "../utils"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 const Container = styled.div`
   //border: 1px solid blue; /* BORDER TEST*/
 
@@ -59,14 +61,31 @@ const Line = styled.div`
   margin-left: 10px;
   height: 120px;
 `
-
+gsap.registerPlugin(ScrollTrigger)
 export default function Title(prop) {
+  useEffect(() => {
+    gsap.set(".titleS", { x: -30, opacity: 0 })
+
+    gsap.to(".titleS", {
+      x: 0,
+      stagger: 0.05,
+      opacity: 1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".TitleCont",
+        start: "center bottom", // the default values
+        end: "bottom top",
+
+        markers: true,
+      },
+    })
+  }, [])
   return (
-    <Container>
+    <Container className="TitleCont">
       <Line></Line>
       <TextContainer>
-        <TextB>{prop.title}</TextB>
-        <TextSm>{prop.children}</TextSm>
+        <TextB className="titleS">{prop.title}</TextB>
+        <TextSm className="titleS">{prop.children}</TextSm>
       </TextContainer>
     </Container>
   )

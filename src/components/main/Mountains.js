@@ -10,7 +10,7 @@ import mountains from "../../images/mountains.png"
 import lake from "../../images/lake.png"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { colors, media, typography } from "../../utils"
-
+import { Power3 } from "gsap"
 gsap.registerPlugin(ScrollTrigger)
 
 const Container = styled.div`
@@ -108,6 +108,35 @@ const Box = styled.div`
 
 function Mountains() {
   useEffect(() => {
+    let t1 = gsap.timeline({ delay: 1.2 })
+    t1.from(
+      ".mountainscont",
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.2 },
+      "Start"
+    )
+    t1.from(
+      ".im8",
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.2 },
+      "Start"
+    )
+    t1.from(
+      ".mountains",
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.5 },
+      "Start"
+    )
+    t1.from(
+      ".lake",
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.7 },
+      "Start"
+    )
+    t1.from(
+      ".birds",
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 1 },
+      "Start"
+    )
+  }, [])
+
+  useEffect(() => {
     gsap.set(".im8", { y: 2 })
 
     gsap.to(".im8", {
@@ -153,7 +182,7 @@ function Mountains() {
     })
   }, [])
   return (
-    <Container>
+    <Container className="mountainscont">
       <Box className="impla" />
       <Box className="imbg" />
       <Box className="birds" />
