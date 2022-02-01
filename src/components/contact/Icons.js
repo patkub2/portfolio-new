@@ -72,7 +72,11 @@ export default function Icons() {
   return (
     <>
       <Container>
-        <a href="mailto:patrykkubala1999@gmail.com" target="_blank">
+        <a
+          href="mailto:patrykkubala1999@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Element>
             <Img src={emailIc}></Img>
             <Text>
@@ -81,7 +85,11 @@ export default function Icons() {
             </Text>
           </Element>
         </a>
-        <a href="https://www.linkedin.com/in/patkub2" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/patkub2"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Element>
             <Img src={linkedinIc}></Img>
             <Text>
@@ -93,6 +101,7 @@ export default function Icons() {
         <a
           href="https://www.facebook.com/people/Patryk-Kubala/100010128281851"
           target="_blank"
+          rel="noreferrer"
         >
           <Element>
             <Img src={facebookIc}></Img>
@@ -102,7 +111,7 @@ export default function Icons() {
             </Text>
           </Element>
         </a>
-        <a href="https://github.com/patkub2" target="_blank">
+        <a href="https://github.com/patkub2" target="_blank" rel="noreferrer">
           <Element>
             <Img src={githubIc}></Img>
             <Text>

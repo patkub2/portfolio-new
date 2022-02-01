@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react"
+import React, { useRef, useState } from "react"
 import styled from "styled-components"
 import emailjs from "emailjs-com"
 import "./index.css"
@@ -90,7 +90,7 @@ export default function Email() {
       })
     }
   }
-  const notify = () => console.log(submitted)
+  //const notify = () => console.log(submitted)
   //<button onClick={() => notify()}>sada</button>
   return (
     <>

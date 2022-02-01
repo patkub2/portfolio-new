@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Apps from "./Apps"
 import Title from "../Title"
 import BallAnimation from "./BallAnimation"
-import { colors, media, typography } from "../../utils"
+import { media } from "../../utils"
 const Container = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
   display: flex;

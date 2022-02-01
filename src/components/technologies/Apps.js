@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import arrow from "../../images/arrow.svg"
-import { colors, media, typography } from "../../utils"
+import { typography } from "../../utils"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
@@ -50,7 +50,7 @@ export default function Apps(prop) {
   return (
     <>
       <Container id="technologies">
-        <img className="icons" src={arrow}></img>
+        <img className="icons" src={arrow} alt="none"></img>
         <TextSm className="icons">{prop.children}</TextSm>
       </Container>
     </>

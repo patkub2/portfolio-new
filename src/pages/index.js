@@ -34,10 +34,6 @@ const Container = styled.div`
   `}
 `
 
-const Space2 = styled.div`
-  min-height: 2000px;
-`
-
 const Phone = styled.div`
   //width: 360px;
 `

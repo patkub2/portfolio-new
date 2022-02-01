@@ -94,7 +94,7 @@ const Tech = styled.div`
   align-items: center;
   font-size: ${typography.h6};
   font-style: normal;
-  min-width: 190px;
+  min-width: 100px;
 
   ${media.phone`
   width: 40%;

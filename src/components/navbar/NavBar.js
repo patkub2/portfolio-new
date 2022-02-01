@@ -40,20 +40,7 @@ const Img = styled.img`
   height: 100%;
   margin: 0 10px;
 `
-const Link = styled.a`
-  //border: 1px solid red; /* BORDER TEST*/
-  font-size: ${typography.h5};
-  font-weight: 400;
-  margin: 0 5px;
-  text-decoration: none;
-  color: black;
-  padding: 10px 20px;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  svg {
-    position: absolute;
-  }
-`
+
 const Menu = styled.div`
   //border: 1px solid yellow; /* BORDER TEST*/
   display: none;

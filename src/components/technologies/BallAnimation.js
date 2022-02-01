@@ -13,7 +13,6 @@ import reactIcon from "../../images/icons/react-skew.svg"
 import reduxIcon from "../../images/icons/redux-skew.svg"
 import gatsbyIcon from "../../images/icons/gatsby-skew.svg"
 import gitIcon from "../../images/icons/git-skew.svg"
-import { colors, media, typography } from "../../utils"
 gsap.registerPlugin(ScrollTrigger)
 
 const Box = styled.div`
@@ -89,7 +88,6 @@ function BallAnimation() {
     const shadow = elements.querySelector("#shadow")
     const tl = gsap.timeline({ repeat: -1, yoyo: true })
     const t2 = gsap.timeline({ repeat: -1, delay: 0.55 })
-    const t4 = gsap.timeline({ repeat: 0 })
 
     gsap.set(ballNew, { y: 0, backgroundColor: "#DE4C36" })
     gsap.set(image, { y: 265, attr: { src: htmlIcon }, autoAlpha: 0 })
