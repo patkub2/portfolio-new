@@ -51,7 +51,7 @@ const Conf = styled.div`
 function IndexPage() {
   return (
     <Conf>
-      {" "}
+      <title>My Title</title>{" "}
       <Phone>
         <NavBar />
 
