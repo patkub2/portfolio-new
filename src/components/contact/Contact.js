@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { colors, media, typography } from "../../utils"
+import { media, typography } from "../../utils"
 import Title from "../Title"
-import Button from "./Button"
 import Email from "./Email"
 import Icons from "./Icons"
 const Container = styled.div`

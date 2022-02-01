@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Picture from "./Picture"
-import { colors, media, typography } from "../../utils"
+import { media, typography } from "../../utils"
 import github from "../../images/github64.png"
 const Container = styled.div`
   //border: 2px solid blue; /* BORDER TEST*/

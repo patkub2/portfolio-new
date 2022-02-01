@@ -2,7 +2,7 @@ import { slide as Menu } from "react-burger-menu"
 import "./index.css"
 import React, { useState } from "react"
 import styled from "styled-components"
-import { colors, media, typography } from "../../utils"
+import { media, typography } from "../../utils"
 const Link = styled.a`
   //border: 1px solid red; /* BORDER TEST*/
 

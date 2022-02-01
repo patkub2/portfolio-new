@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { colors, media, typography } from "../../utils"
+import { media, typography } from "../../utils"
 import emailIc from "../../images/contact/emailIc.png"
 import facebookIc from "../../images/contact/facebookIc.png"
 import githubIc from "../../images/contact/githubIc.png"
@@ -33,8 +33,13 @@ const Element = styled.div`
   width: 100%;
 
   margin: 10px 0;
-
+  transition: transform 0.5s ease-in-out;
   justify-content: flex-start;
+  :hover {
+    img {
+      transform: rotate(-90deg);
+    }
+  }
 `
 const Img = styled.img`
   //border: 1px solid blue; /* BORDER TEST*/

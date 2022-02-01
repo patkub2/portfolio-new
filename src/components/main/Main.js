@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
-import { colors, media, typography } from "../../utils"
+import { media, typography } from "../../utils"
 import { Power3 } from "gsap"
 import gsap from "gsap"
 const Container = styled.div`
@@ -14,6 +14,10 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  a {
+    text-decoration: none;
+  }
+
   ${media.desktop`
   margin: 72px 0;
   margin-right: 5vw;
@@ -98,7 +102,9 @@ export default function Main() {
     <Container className="cont">
       <Title>Patryk Kubala</Title>
       <TitleSm>Front-end developer</TitleSm>
-      <Button>See more</Button>{" "}
+      <a href="#technologies">
+        <Button>See more</Button>
+      </a>{" "}
     </Container>
   )
 }

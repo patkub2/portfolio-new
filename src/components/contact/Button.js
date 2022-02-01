@@ -1,8 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { colors, media, typography } from "../../utils"
-import Title from "../Title"
-import Email from "./Email"
 const Container = styled.div`
   .uiui-button {
     min-width: 220px;

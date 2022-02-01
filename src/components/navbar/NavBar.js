@@ -1,9 +1,9 @@
 import logo from "../../images/Logo.svg"
 import "./index.css"
-import React, { useRef, useEffect } from "react"
+import React, { useEffect } from "react"
 import Burgermenu from "./Burgermenu"
 import styled from "styled-components"
-import { colors, media, typography } from "../../utils"
+import { media, typography } from "../../utils"
 import gsap from "gsap"
 import { Power3 } from "gsap"
 const Container = styled.div`

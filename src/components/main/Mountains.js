@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import ".././layout.css"
 import gsap from "gsap"
@@ -9,7 +9,7 @@ import birds from "../../images/birds.png"
 import mountains from "../../images/mountains.png"
 import lake from "../../images/lake.png"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { colors, media, typography } from "../../utils"
+import { media } from "../../utils"
 import { Power3 } from "gsap"
 gsap.registerPlugin(ScrollTrigger)
 

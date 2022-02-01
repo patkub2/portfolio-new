@@ -1,10 +1,10 @@
-import React, { useRef, useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 import "./../styles/global.css"
 import gsap from "gsap"
 
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { colors, media, typography } from "../utils"
+import { media } from "../utils"
 
 import NavBar from "../components/navbar/NavBar"
 import Technologies from "../components/technologies/Technologies"

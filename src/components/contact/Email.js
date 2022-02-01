@@ -1,8 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 import styled from "styled-components"
 import emailjs from "emailjs-com"
-import { colors, media, typography } from "../../utils"
-import Button from "./Button"
 import "./index.css"
 import ReCAPTCHA from "react-google-recaptcha"
 import { ToastContainer, toast } from "react-toastify"
