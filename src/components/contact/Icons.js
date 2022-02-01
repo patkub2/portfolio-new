@@ -39,6 +39,15 @@ const Element = styled.div`
 const Img = styled.img`
   //border: 1px solid blue; /* BORDER TEST*/
   margin: 0;
+  width: 60px;
+  transition: transform 0.5s ease-in-out;
+
+  ${media.tablet`
+  width: 80px;
+  `} //margin: 1% 0;
+  :hover {
+    transform: rotate(-90deg);
+  }
 `
 const Text = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
@@ -58,7 +67,7 @@ export default function Icons() {
   return (
     <>
       <Container>
-        <a href="#">
+        <a href="mailto:patrykkubala1999@gmail.com" target="_blank">
           <Element>
             <Img src={emailIc}></Img>
             <Text>
@@ -67,7 +76,7 @@ export default function Icons() {
             </Text>
           </Element>
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/patkub2" target="_blank">
           <Element>
             <Img src={linkedinIc}></Img>
             <Text>
@@ -76,7 +85,10 @@ export default function Icons() {
             </Text>
           </Element>
         </a>
-        <a href="#">
+        <a
+          href="https://www.facebook.com/people/Patryk-Kubala/100010128281851"
+          target="_blank"
+        >
           <Element>
             <Img src={facebookIc}></Img>
             <Text>
@@ -85,7 +97,7 @@ export default function Icons() {
             </Text>
           </Element>
         </a>
-        <a href="#">
+        <a href="https://github.com/patkub2" target="_blank">
           <Element>
             <Img src={githubIc}></Img>
             <Text>

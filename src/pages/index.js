@@ -12,6 +12,7 @@ import Projects from "../components/projects/Projects"
 import Space from "../components/Space"
 import Hello from "../components/main/Hello"
 import Contact from "../components/contact/Contact"
+import Footer from "../components/Footer"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -66,6 +67,7 @@ function IndexPage() {
           <Space />
           <Projects />
           <Contact />
+          <Footer />
         </Container>
       </Phone>
       <div id="test"></div>

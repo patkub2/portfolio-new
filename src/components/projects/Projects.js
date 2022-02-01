@@ -5,6 +5,7 @@ import image2 from "../../images/image2.png"
 import image3 from "../../images/image3.png"
 import image4 from "../../images/image4.png"
 import image5 from "../../images/image5.png"
+import image6 from "../../images/image6.png"
 import Title from "../Title"
 import Site from "./Site"
 import sassIcon from "../../images/icons/sass-skew.svg"
@@ -58,7 +59,7 @@ export default function Projects() {
       </Site>
       <Site
         mirror
-        img={image2}
+        img={image6}
         title="CoffeeHome"
         github="https://github.com/patkub2/coffee-home"
         live="https://github.com/patkub2/coffee-home"
@@ -73,7 +74,8 @@ export default function Projects() {
       >
         The latest project I'm still working on. Online store which will allow
         the customer to log in and add products to cart. Also a option to add
-        new products from the administrator level. Page still in development.
+        new products from the administrator level. Page still in development due
+        to lack of time because of studies.
       </Site>
       <Site
         img={image4}

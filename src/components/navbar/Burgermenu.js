@@ -6,7 +6,13 @@ import { colors, media, typography } from "../../utils"
 const Link = styled.a`
   //border: 1px solid red; /* BORDER TEST*/
 
+  font-size: ${typography.h6};
+  ${media.tablet`
+  font-size: ${typography.h4};
+  `} //margin: 1% 0;
+  ${media.desktop`
   font-size: ${typography.h3};
+  `} //margin: 1% 0;
 `
 
 export default function Burgermenu() {

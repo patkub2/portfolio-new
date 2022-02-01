@@ -43,9 +43,10 @@ const Containermirror = styled.div`
 const TextB = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
   margin: 30px 0px;
-
+  font-weight: 400;
   font-size: ${typography.h4};
   ${media.desktop`
+  font-weight: 300;
   font-size: ${typography.h3};
   margin: 40px 0px;
   `}
@@ -55,18 +56,23 @@ const Text = styled.div`
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-
+  font-weight: 400;
   font-size: ${typography.h5};
   ${media.desktop`
   width: 40%;
+  font-weight: 300;
   font-size: ${typography.h4};
   `}//margin: 1% 0;
 `
 const TextSm = styled.div`
   //border: 1px solid red; /* BORDER TEST*/
   font-size: ${typography.h6};
+  font-weight: 400;
   margin-bottom: 15px;
   font-weight: 400;
+  ${media.desktop`
+  font-weight: 300;
+  `}
 `
 const Pic = styled.div`
   //background-color: black;
@@ -142,7 +148,7 @@ const Button = styled.a`
   align-items: center;
   font-size: ${typography.h6};
   margin-top: 2%;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 1px;
   //padding: 13px 50px 13px;
   width: 150px;
@@ -171,6 +177,7 @@ const Button = styled.a`
   }
   ${media.desktop`
   margin-top: 2%;
+  font-weight: 400;
   `}
 `
 const Img = styled.img`
