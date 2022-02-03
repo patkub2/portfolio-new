@@ -13,6 +13,7 @@ import Space from "../components/Space"
 import Hello from "../components/main/Hello"
 import Contact from "../components/contact/Contact"
 import Footer from "../components/Footer"
+import Seo from "../components/seo"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -51,7 +52,8 @@ const Conf = styled.div`
 function IndexPage() {
   return (
     <Conf>
-      <title>My Title</title>{" "}
+      <Seo title="Patryk Kubala" />
+
       <Phone>
         <NavBar />
 

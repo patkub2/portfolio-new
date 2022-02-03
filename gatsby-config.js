@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Portfolio`,
-    description: `Just a front end developer portfolio.`,
+    description: `Portfolio oa a self-taught and passionate programmer.
+    After a year of experience and several independent projects, looking for my first job as a Junior Front End Developer to gain new skills and experience.`,
     author: `@patkub2`,
     siteUrl: `https://patkub.netlify.app`,
   },
@@ -34,7 +35,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/Logo.svg`, // This path is relative to the root of the site.
+        icon: `src/images/api.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,
