@@ -15,7 +15,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Container = styled.div`
   position: relative;
-
   padding: 0;
   margin: 0;
   display: flex;
@@ -39,24 +38,28 @@ const Container = styled.div`
   `}
 
   .mountains {
+    visibility: hidden;
     z-index: 1;
     background-image: url(${mountains});
     padding: 0;
     margin: 0;
   }
   .lake {
+    visibility: hidden;
     z-index: 2;
     background-image: url(${lake});
     padding: 0;
     margin: 0;
   }
   .im8 {
+    visibility: hidden;
     z-index: 8;
     background-image: url(${im8});
     padding: 0;
     margin: 0;
   }
   .birds {
+    visibility: hidden;
     z-index: 8;
     background-image: url(${birds});
     padding: 0;
@@ -64,6 +67,7 @@ const Container = styled.div`
     overflow: hidden;
   }
   .impla {
+    visibility: hidden;
     z-index: 10;
     background-image: url(${impla});
     padding: 0;
@@ -75,6 +79,7 @@ const Container = styled.div`
     background-position: left;
   }
   .imbgcolor {
+    visibility: hidden;
     z-index: 0;
     padding: 0;
     margin: 0;
@@ -85,6 +90,7 @@ const Container = styled.div`
     );
   }
   .imbg {
+    visibility: hidden;
     z-index: 1;
     padding: 0;
     margin: 0;
@@ -111,27 +117,42 @@ function Mountains() {
     let t1 = gsap.timeline({ delay: 1.2 })
     t1.from(
       ".mountainscont",
-      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.2 },
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.2, autoAlpha: 0 },
       "Start"
     )
     t1.from(
       ".im8",
-      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.2 },
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.2, autoAlpha: 0 },
       "Start"
     )
     t1.from(
       ".mountains",
-      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.5 },
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.5, autoAlpha: 0 },
       "Start"
     )
     t1.from(
       ".lake",
-      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.7 },
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.7, autoAlpha: 0 },
       "Start"
     )
     t1.from(
       ".birds",
-      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 1 },
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 1, autoAlpha: 0 },
+      "Start"
+    )
+    t1.from(
+      ".imbg",
+      { opacity: 0, ease: Power3.easeOut, delay: 0, autoAlpha: 0 },
+      "Start"
+    )
+    t1.from(
+      ".imbgcolor",
+      { opacity: 0, ease: Power3.easeOut, delay: 0, autoAlpha: 0 },
+      "Start"
+    )
+    t1.from(
+      ".impla",
+      { opacity: 0, ease: Power3.easeOut, delay: 0, autoAlpha: 0 },
       "Start"
     )
   }, [])
@@ -141,6 +162,7 @@ function Mountains() {
 
     gsap.to(".im8", {
       yPercent: 15,
+
       ease: "none",
       scrollTrigger: {
         trigger: ".impla",

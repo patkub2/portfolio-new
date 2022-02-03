@@ -37,7 +37,7 @@ export default function Apps(prop) {
 
     gsap.to(".icons", {
       x: 0,
-      stagger: 0.05,
+      stagger: 0.02,
       opacity: 1,
       ease: "none",
       scrollTrigger: {

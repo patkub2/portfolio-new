@@ -4,6 +4,7 @@ import { media, typography } from "../../utils"
 import { Power3 } from "gsap"
 import gsap from "gsap"
 const Container = styled.div`
+  visibility: hidden;
   margin-top: 160px;
   margin-bottom: 20px;
   //border: 1px solid red; /* BORDER TEST*/
@@ -94,7 +95,7 @@ export default function Main() {
     let t1 = gsap.timeline({ delay: 1 })
     t1.from(
       ".cont",
-      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.3 },
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.3, autoAlpha: 0 },
       "Start"
     )
   }, [])

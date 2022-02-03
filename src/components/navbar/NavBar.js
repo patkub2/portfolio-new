@@ -7,6 +7,7 @@ import { media, typography } from "../../utils"
 import gsap from "gsap"
 import { Power3 } from "gsap"
 const Container = styled.div`
+  visibility: hidden;
   width: 100%;
   max-width: 1700px;
   position: fixed;
@@ -133,7 +134,7 @@ export default function NavBar() {
     let t1 = gsap.timeline({ delay: 1 })
     t1.from(
       ".navbar",
-      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.3 },
+      { y: -35, opacity: 0, ease: Power3.easeOut, delay: 0.3, autoAlpha: 0 },
       "Start"
     )
   }, [])

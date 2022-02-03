@@ -74,14 +74,14 @@ export default function Projects() {
       >
         The latest project I'm still working on. Online store which will allow
         the customer to log in and add products to cart. Also a option to add
-        new products from the administrator level. Page still in development due
-        to lack of time because of studies.
+        new products from the administrator level. The site is still under
+        development due to lack of time.
       </Site>
       <Site
         img={image4}
         title="Portfolio (old)"
         github="https://github.com/patkub2/portfolio"
-        live="https://patkub.netlify.app"
+        live="https://patkubold.netlify.app"
         tech={[
           ["React & Hooks", reactIcon],
           ["Styled components", styledComponentsIcon],
